@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Suresh Mohan Semwal | Elite Corporate Trainer</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Poppins', 'Inter', sans-serif; background-color: #f8fafc; }
+    .gradient-overlay {
+      background: linear-gradient(to bottom right, rgba(0,0,0,0.4), rgba(0,0,0,0.6));
+    }
+    .card {
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    }
+    .glass {
+      background: rgba(255, 255, 255, 0.3);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+  </style>
+</head>
+<body class="text-gray-900">
+
+  <!-- NAVBAR -->
+  <header class="fixed w-full top-0 left-0 z-50 bg-white shadow-md">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold text-indigo-600">Suresh Semwal</h1>
+      <nav class="space-x-6 hidden md:block">
+        <a href="#about" class="text-gray-700 hover:text-indigo-600 font-medium">About</a>
+        <a href="#services" class="text-gray-700 hover:text-indigo-600 font-medium">Services</a>
+        <a href="#video" class="text-gray-700 hover:text-indigo-600 font-medium">Watch</a>
+        <a href="#impact" class="text-gray-700 hover:text-indigo-600 font-medium">Impact</a>
+        <a href="#testimonials" class="text-gray-700 hover:text-indigo-600 font-medium">Testimonials</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO BANNER -->
+  <section class="relative h-screen w-full pt-20">
+    <img src="11.png" class="w-full h-full object-cover absolute z-0" alt="Banner">
+    <div class="absolute inset-0 gradient-overlay flex flex-col justify-center items-center text-center px-4">
+      <h1 class="text-white text-5xl md:text-6xl font-extrabold" data-aos="fade-up">Transforming Leaders, Empowering Change</h1>
+      <p class="text-gray-200 mt-6 max-w-2xl" data-aos="fade-up" data-aos-delay="200">India's Leading Leadership Coach | Suresh Mohan Semwal</p>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="py-24 bg-white text-center">
+    <h2 class="text-5xl font-bold mb-12" data-aos="fade-up">Meet Suresh Mohan Semwal</h2>
+    <div class="flex justify-center mb-10" data-aos="fade-up" data-aos-delay="100">
+      <img src="14.png" alt="About Suresh" class="rounded-2xl w-96 shadow-xl">
+    </div>
+    <p class="max-w-4xl mx-auto text-xl text-gray-700" data-aos="fade-up" data-aos-delay="200">
+      With decades of experience, Suresh Mohan Semwal has transformed over 25,000 professionals across industries. From leadership to emotional intelligence, his energy, insight and vision inspire change at its core.
+    </p>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="py-24 bg-gradient-to-r from-indigo-100 to-purple-100">
+    <h2 class="text-5xl font-bold text-center mb-16" data-aos="fade-up">Services Offered</h2>
+    <div class="grid md:grid-cols-3 gap-10 max-w-6xl mx-auto px-6">
+      <div class="bg-white p-6 rounded-3xl shadow-xl card" data-aos="zoom-in">
+        <img src="17.png" class="w-full h-48 object-cover rounded-lg mb-4" alt="Leadership Development">
+        <h3 class="text-2xl font-semibold mb-2">Leadership Development</h3>
+        <p class="text-gray-600">Build next-gen leaders who drive performance and inspire teams.</p>
+      </div>
+      <div class="bg-white p-6 rounded-3xl shadow-xl card" data-aos="zoom-in" data-aos-delay="100">
+        <img src="18.png" class="w-full h-48 object-cover rounded-lg mb-4" alt="Emotional Intelligence">
+        <h3 class="text-2xl font-semibold mb-2">Emotional Intelligence</h3>
+        <p class="text-gray-600">Boost organizational empathy, communication, and decision-making.</p>
+      </div>
+      <div class="bg-white p-6 rounded-3xl shadow-xl card" data-aos="zoom-in" data-aos-delay="200">
+        <img src="19.png" class="w-full h-48 object-cover rounded-lg mb-4" alt="Keynote Speaking">
+        <h3 class="text-2xl font-semibold mb-2">Keynote Speaking</h3>
+        <p class="text-gray-600">Inspire minds across the globe with transformative keynotes.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- VIDEO -->
+  <section id="video" class="py-24 bg-white text-center">
+    <h2 class="text-5xl font-bold mb-12" data-aos="fade-up">Watch Suresh in Action</h2>
+    <div class="max-w-5xl mx-auto px-4" data-aos="zoom-in">
+      <div class="relative overflow-hidden rounded-3xl shadow-2xl border-4 border-blue-300">
+        <iframe class="w-full h-96" src="https://www.youtube.com/embed/EvT0c2eKFL8" title="Suresh Mohan Semwal YouTube Video" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- COUNTERS -->
+  <section id="impact" class="py-28 bg-gradient-to-r from-indigo-600 to-purple-700 text-white">
+    <h2 class="text-5xl font-bold text-center mb-16" data-aos="fade-up">Impact So Far</h2>
+    <div class="flex flex-wrap justify-center gap-20 text-center max-w-6xl mx-auto">
+      <div data-aos="fade-up">
+        <p class="text-6xl font-extrabold counter" data-target="25000">0</p>
+        <p class="mt-4 text-xl font-medium">Leaders Trained</p>
+      </div>
+      <div data-aos="fade-up" data-aos-delay="100">
+        <p class="text-6xl font-extrabold counter" data-target="300">0</p>
+        <p class="mt-4 text-xl font-medium">Organizations Impacted</p>
+      </div>
+      <div data-aos="fade-up" data-aos-delay="200">
+        <p class="text-6xl font-extrabold counter" data-target="50">0</p>
+        <p class="mt-4 text-xl font-medium">Annual Keynotes</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section id="testimonials" class="py-24 bg-white">
+    <h2 class="text-5xl font-bold text-center mb-16" data-aos="fade-up">What People Say</h2>
+    <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-10">
+      <div class="bg-gradient-to-r from-white to-indigo-50 p-6 rounded-2xl shadow-md" data-aos="fade-up">
+        <p class="italic text-gray-700">“Suresh Sir’s session was a turning point for our leadership team. His delivery is powerful and authentic.”</p>
+        <p class="mt-4 font-semibold text-indigo-700">— HR Head, Infosys</p>
+      </div>
+      <div class="bg-gradient-to-r from-white to-purple-50 p-6 rounded-2xl shadow-md" data-aos="fade-up" data-aos-delay="100">
+        <p class="italic text-gray-700">“I’ve never attended such an impactful workshop. It changed my thinking and approach entirely.”</p>
+        <p class="mt-4 font-semibold text-purple-700">— Manager, Tata Motors</p>
+      </div>
+      <div class="bg-gradient-to-r from-white to-pink-50 p-6 rounded-2xl shadow-md" data-aos="fade-up" data-aos-delay="200">
+        <p class="italic text-gray-700">“He makes complex leadership ideas simple and actionable. Highly recommended!”</p>
+        <p class="mt-4 font-semibold text-pink-700">— CEO, StartUp Inc.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-gray-100 py-6 text-center text-gray-600 text-sm">
+    © 2025 Suresh Mohan Semwal. Designed with ❤️ by Kajal.
+  </footer>
+
+  <!-- WHATSAPP BUTTON -->
+  <a href="https://wa.me/919999999999" target="_blank" class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg z-50">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 12c0-2.21-1.79-4-4-4S8 9.79 8 12s1.79 4 4 4 4-1.79 4-4z" />
+    </svg>
+  </a>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    AOS.init({ once: true, duration: 1000 });
+    const counters = document.querySelectorAll('.counter');
+    const counterObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const counter = entry.target;
+          const target = +counter.dataset.target;
+          let current = 0;
+          const step = Math.ceil(target / 100);
+          const updateCount = () => {
+            current += step;
+            if (current >= target) {
+              counter.textContent = target.toLocaleString() + '+';
+            } else {
+              counter.textContent = current.toLocaleString();
+              requestAnimationFrame(updateCount);
+            }
+          };
+          updateCount();
+          counterObserver.unobserve(counter);
+        }
+      });
+    }, { threshold: 0.6 });
+
+    counters.forEach(counter => counterObserver.observe(counter));
+  </script>
+
+</body>
+</html>
