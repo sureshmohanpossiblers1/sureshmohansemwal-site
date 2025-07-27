@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Services | Suresh Mohan Semwal</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a2e8f2c6f8.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+<!-- Swiper CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+
+
+  <style>
+  body {
+    font-family: 'Outfit', sans-serif;
+  }
+
+  .glass {
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(8px);
+  }
+
+  .fade-in-up {
+    animation: fadeInUp 1s ease-out forwards;
+  }
+
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0); }
+}
+
+.floating-image {
+  animation: float 5s ease-in-out infinite;
+}
+
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(15px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .pop-in {
+    animation: popIn 0.6s ease-out;
+  }
+
+  @keyframes popIn {
+    0% {
+      transform: scale(0.95);
+      opacity: 0;
+    }
+    50% {
+      transform: scale(1.03);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+ 
+  /* Optional: Center quote container if needed */
+  #subtitleDisplay {
+    text-align: center;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-top: 1rem;
+    word-wrap: break-word;
+  }
+</style>
+
+</head>
+<body class="bg-white text-gray-800 scroll-smooth" >
+  
+  <!-- 🌟 Responsive Navbar with Working Dropdown -->
+<nav class="bg-white/70 backdrop-blur-lg shadow-md sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between h-16 items-center">
+      
+      <!-- Logo / Brand -->
+      <div class="flex-shrink-0 text-xl font-bold text-blue-700">SURESH MOHAN SEMWAL</div>
+
+      <!-- Desktop Menu -->
+      <div class="hidden md:flex space-x-8 items-center text-gray-800 font-medium">
+        <a href="index.html" class="hover:text-blue-600 transition">Home</a>
+        <a href="about.html" class="hover:text-blue-600 transition">About</a>
+
+        <!-- 🔽 Services Dropdown -->
+        <div class="relative group">
+          <button class="hover:text-blue-600 transition flex items-center gap-1">
+            Services
+            <svg class="w-4 h-4 transition-transform transform group-hover:rotate-180" fill="none" stroke="currentColor" stroke-width="2"
+              viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+
+          <div class="absolute left-0 mt-2 w-64 bg-white rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible hover:opacity-100 hover:visible transition-all duration-300 z-50">
+            <a href="services.html" class="block px-4 py-2 hover:bg-blue-100 font-semibold">All Services</a>
+            <hr class="border-gray-200 my-1">
+            <a href="services/project-folder/keynote.html" class="block px-4 py-2 hover:bg-blue-100">Keynote Speaking</a>
+            <a href="services/project-folder/leadership.html" class="block px-4 py-2 hover:bg-blue-100">Leadership Development</a>
+            <a href="services/project-folder/softskills.html" class="block px-4 py-2 hover:bg-blue-100">Soft Skills Workshops</a>
+            <a href="services/project-folder/motivational.html" class="block px-4 py-2 hover:bg-blue-100">Motivational Speaking</a>
+          </div>
+        </div>
+         <a href="resources.html" class="hover:text-blue-600 transition">Free Resources</a>
+        <a href="testimonials.html" class="hover:text-blue-600 transition">Testimonials</a>
+        <a href="blogs.html" class="hover:text-blue-600 transition">Blogs</a>
+        <a href="media.html" class="hover:text-blue-600 transition">Media</a>
+        <a href="contact.html" class="hover:text-blue-600 transition">Contact</a>
+      </div>
+
+      <!-- Hamburger Button for Mobile -->
+      <div class="md:hidden">
+        <button id="mobile-menu-toggle" class="focus:outline-none text-gray-800">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 📱 Mobile Menu -->
+  <div id="mobile-menu" class="md:hidden hidden px-4 pt-4 pb-6 space-y-3 bg-white shadow">
+    <a href="index.html" class="block hover:text-blue-600">Home</a>
+    <a href="about.html" class="block hover:text-blue-600">About</a>
+
+    <details class="group">
+      <summary class="cursor-pointer hover:text-blue-600 font-semibold">Services</summary>
+      <div class="pl-4 mt-2 space-y-2">
+        <a href="services.html" class="block hover:text-blue-600">All Services</a>
+        <a href="services/project-folder/keynote.html" class="block hover:text-blue-600">Keynote Speaking</a>
+        <a href="services/project-folder/leadership.html" class="block hover:text-blue-600">Leadership Development</a>
+        <a href="services/project-folder/softskills.html" class="block hover:text-blue-600">Soft Skills Workshops</a>
+        <a href="services/project-folder/motivational.html" class="block hover:text-blue-600">Motivational Speaking</a>
+      </div>
+    </details>
+
+    <a href="testimonials.html" class="block hover:text-blue-600">Testimonials</a>
+    <a href="blogs.html" class="block hover:text-blue-600">Blogs</a>
+    <a href="media.html" class="block hover:text-blue-600">Media</a>
+   <a href="resources.html" class="block hover:text-blue-600">Free Resources</a>
+    <a href="contact.html" class="block hover:text-blue-600">Contact</a>
+  </div>
+</nav>
+
+
+
+<!-- Top Hero Section -->
+  <section class="flex flex-col md:flex-row items-center justify-center px-6 md:px-20 py-10 gap-10 bg-[#f0f4f8]">
+    <div class="md:w-1/2">
+      <div class="w-full max-h-[520px] overflow-hidden rounded-xl shadow-xl glow">
+  <img src="../18.png" alt="Suresh Mohan Semwal" class="floating-image w-full h-full object-cover shadow-lg"/>
+</div>
+
+    </div>
+    <div class="grid md:grid-cols-1 gap-6 fade-in w-full md:w-1/2">
+      <div class="bg-blue-50 p-6 rounded-lg shadow">
+        <h3 class="text-2xl font-bold text-blue-900 mb-2">Why Choose Suresh Mohan Semwal?</h3>
+        <ul class="list-disc pl-5 text-gray-700 leading-relaxed">
+          <li>Over 24+ years of empowering individuals and organizations</li>
+          <li>Real-world solutions backed by deep psychological insight</li>
+          <li>Thousands transformed through practical wisdom</li>
+        </ul>
+      </div>
+      <div class="bg-green-50 p-6 rounded-lg shadow">
+        <h3 class="text-2xl font-bold text-green-900 mb-2">What You Get</h3>
+        <ul class="list-disc pl-5 text-gray-700 leading-relaxed">
+          <li>Interactive sessions with personalized guidance</li>
+          <li>Tools for leadership, motivation, and transformation</li>
+          <li>Customized executive & outbound training modules</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Minimalist Impact Section -->
+<section class="py-16 px-6 md:px-20 bg-gradient-to-br from-[#f9fafb] to-[#eef2f7]">
+  <h2 class="text-4xl font-bold text-[#1d3557] mb-12 text-center fade-in">Unlock Your Inner Power</h2>
+
+  <div class="max-w-6xl mx-auto bg-white/70 backdrop-blur-md shadow-2xl rounded-3xl p-6 md:p-12 flex flex-col md:flex-row gap-10 items-center justify-between border-l-8 border-blue-400 transition-all duration-500 ease-in-out">
+
+    <!-- Quote & Title Block -->
+    <div class="w-full md:w-1/2 flex flex-col justify-center gap-6">
+      <h3 class="text-2xl font-semibold text-[#1d3557]">Transform Through Experience</h3>
+
+      <div id="quoteBox" class="bg-white/90 text-gray-700 text-lg leading-relaxed font-medium p-5 rounded-xl shadow-inner min-h-[100px] border-l-4 border-blue-400 transition-all duration-500">
+        <!-- Rotating quote goes here -->
+      </div>
+
+      <div class="text-right text-sm text-gray-500 font-semibold">~ Suresh Mohan Semwal</div>
+    </div>
+
+    <!-- Video Block -->
+    <div class="w-full md:w-1/2">
+      <div class="rounded-2xl overflow-hidden shadow-lg border border-gray-200 max-h-[260px]">
+        <video
+          id="videoPlayer"
+          class="w-full object-cover aspect-video"
+          src="video1.mp4"
+          autoplay
+          muted
+          loop
+          controls
+          crossorigin="anonymous"
+        >
+          <track src="subtitles.vtt" kind="subtitles" srclang="en" label="English" default>
+        </video>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+  
+
+
+ <!-- Our Services Section -->
+   <section class="text-center px-6 md:px-20 py-16 bg-[#f9fafb]">
+    <h2 class="text-4xl font-bold text-[#1d3557] mb-4">Our Services</h2>
+    <p class="text-lg text-gray-600 mb-10">We offer a wide range of services to empower individuals and teams</p>
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-8 place-items-stretch">
+
+  <!-- Keynote Speech -->
+  <a href="services/project-folder/keynote.html" class="bg-white rounded-xl p-6 shadow hover:shadow-xl transition-all border-l-4 border-blue-500">
+    <img src="https://img.icons8.com/color/96/microphone.png" class="w-14 mb-3" alt="Keynote Speech Icon" />
+
+    <h3 class="text-xl font-semibold mb-2">Keynote Speech</h3>
+    <p class="text-gray-600">Inspire your audience with powerful stories and lessons.</p>
+  </a>
+
+  <!-- Leadership Development -->
+  <a href="services/project-folder/leadership.html" class="bg-white rounded-xl p-6 shadow hover:shadow-xl transition-all border-l-4 border-green-500">
+<img src="https://img.icons8.com/color/96/leaderboard.png" alt="Leadership Development Icon" class="w-14 mb-3" />
+
+ <h3 class="text-xl font-semibold mb-2">Leadership Development</h3>
+    <p class="text-gray-600">Empowering individuals to take charge and lead effectively.</p>
+  </a>
+
+  <!-- Soft Skills Workshops -->
+  <a href="services/project-folder/softskills.html" class="bg-white rounded-xl p-6 shadow hover:shadow-xl transition-all border-l-4 border-pink-500">
+    <img src="https://img.icons8.com/color/96/teamwork.png" class="w-14 mb-3" alt="Soft Skills Icon" />
+
+    <h3 class="text-xl font-semibold mb-2">Soft Skills Workshops</h3>
+    <p class="text-gray-600">Enhance communication, empathy, and collaboration.</p>
+  </a>
+
+  <!-- Motivational Speaking -->
+  <a href="services/project-folder/motivational.html" class="bg-white rounded-xl p-6 shadow hover:shadow-xl transition-all border-l-4 border-yellow-500">
+    <img src="https://img.icons8.com/color/96/positive-dynamic.png" class="w-14 mb-3" alt="Motivational Speaking Icon" />
+
+    <h3 class="text-xl font-semibold mb-2">Motivational Seminars</h3>
+    <p class="text-gray-600">Uplift your team with sessions full of energy and insight.</p>
+  </a>
+
+</div>
+
+
+
+ <!-- Stats Section with Icons & JS -->
+<section class="bg-white py-14 px-6 md:px-20 text-center" id="impact">
+  <h2 class="text-3xl font-bold text-[#1d3557] mb-8">Our Impact</h2>
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-[#1f2937]">
+
+    <div>
+      <img src="https://img.icons8.com/color/96/microphone.png" class="w-12 mx-auto mb-2"/>
+      <h3 class="text-4xl font-bold text-blue-600 counter" data-target="600">0</h3>
+      <p class="text-md mt-1">Workshops Delivered</p>
+    </div>
+
+    <div>
+      <img src="https://img.icons8.com/color/96/group.png" class="w-12 mx-auto mb-2"/>
+      <h3 class="text-4xl font-bold text-green-600 counter" data-target="600">0</h3>
+      <p class="text-md mt-1">Corporate Clients</p>
+    </div>
+
+    <div>
+      <img src="https://img.icons8.com/color/96/audience.png" class="w-12 mx-auto mb-2"/>
+      <h3 class="text-4xl font-bold text-pink-600 counter" data-target="600000">0</h3>
+      <p class="text-md mt-1">People Trained</p>
+    </div>
+
+    <div>
+      <img src="https://img.icons8.com/color/96/hourglass.png" class="w-12 mx-auto mb-2"/>
+      <h3 class="text-4xl font-bold text-yellow-600 counter" data-target="24">0</h3>
+      <p class="text-md mt-1">Years of Experience</p>
+    </div>
+  </div>
+</section>
+
+<!-- JS to Animate Counter -->
+<script>
+  const counters = document.querySelectorAll('.counter');
+  const speed = 50;
+
+  counters.forEach(counter => {
+    const updateCount = () => {
+      const target = +counter.getAttribute('data-target');
+      const count = +counter.innerText;
+      const increment = Math.ceil(target / speed);
+
+      if (count < target) {
+        counter.innerText = count + increment;
+        setTimeout(updateCount, 20);
+      } else {
+        counter.innerText = target + "+";
+      }
+    };
+
+    const handleScroll = () => {
+      const sectionTop = counter.getBoundingClientRect().top;
+      if (sectionTop < window.innerHeight) {
+        updateCount();
+        window.removeEventListener('scroll', handleScroll);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+  });
+</script>
+
+<!-- Captured Moments Section -->
+  <section class="py-14 px-6 md:px-20">
+    <h2 class="text-3xl md:text-4xl font-bold text-center mb-10">Captured Moments</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+      <div class="backdrop-blur-md bg-white/30 border border-white/40 rounded-2xl overflow-hidden shadow-xl hover:scale-105 transition-transform duration-300">
+        <img src="../ss2.jpg" alt="Moment" class="w-full h-full object-cover" />
+      </div>
+      <div class="backdrop-blur-md bg-white/30 border border-white/40 rounded-2xl overflow-hidden shadow-xl hover:scale-105 transition-transform duration-300">
+        <img src="../ss1.jpg" alt="Moment" class="w-full h-full object-cover" />
+      </div>
+      <div class="backdrop-blur-md bg-white/30 border border-white/40 rounded-2xl overflow-hidden shadow-xl hover:scale-105 transition-transform duration-300">
+        <img src="../ss5.jpg" alt="Moment" class="w-full h-full object-cover" />
+      </div>
+      <div class="backdrop-blur-md bg-white/30 border border-white/40 rounded-2xl overflow-hidden shadow-xl hover:scale-105 transition-transform duration-300">
+        <img src="../ss6.jpg" alt="Moment" class="w-full h-full object-cover" />
+      </div>
+      <div class="backdrop-blur-md bg-white/30 border border-white/40 rounded-2xl overflow-hidden shadow-xl hover:scale-105 transition-transform duration-300">
+        <img src="../ss7.jpg" alt="Moment" class="w-full h-full object-cover" />
+      </div>
+      <div class="backdrop-blur-md bg-white/30 border border-white/40 rounded-2xl overflow-hidden shadow-xl hover:scale-105 transition-transform duration-300">
+        <img src="../ss4.jpg" alt="Moment" class="w-full h-full object-cover" />
+      </div>
+    </div>
+    <p class="mt-10 text-center italic text-lg text-gray-700">
+      "Transformation begins with belief, and belief starts with you."
+    </p>
+  </section>
+  
+  <!-- SwiperJS CDN for slider -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+<!-- Testimonials Slider Section -->
+<section class="bg-white py-14 px-6 md:px-20 text-center">
+  <h2 class="text-3xl font-bold text-[#1d3557] mb-10">Client Testimonials</h2>
+  <div class="swiper mySwiper max-w-3xl mx-auto">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide p-6 bg-gray-100 rounded-lg shadow">
+        <p class="text-gray-700 italic mb-4">“Suresh’s session was eye-opening. The team left empowered!”</p>
+        <span class="text-sm font-semibold text-gray-500">— Anjali B., TCS</span>
+      </div>
+      <div class="swiper-slide p-6 bg-gray-100 rounded-lg shadow">
+        <p class="text-gray-700 italic mb-4">“Powerful insights delivered with humility. A true inspiration!”</p>
+        <span class="text-sm font-semibold text-gray-500">— Rajiv S., Cognizant</span>
+      </div>
+      <div class="swiper-slide p-6 bg-gray-100 rounded-lg shadow">
+        <p class="text-gray-700 italic mb-4">“Highly engaging and full of practical takeaways. Loved it!”</p>
+        <span class="text-sm font-semibold text-gray-500">— Meera D., IBM</span>
+      </div>
+    </div>
+    <!-- Pagination -->
+    <div class="swiper-pagination mt-6"></div>
+  </div>
+
+  <script>
+    const swiper = new Swiper('.mySwiper', {
+      loop: true,
+      autoplay: { delay: 4000 },
+      pagination: { el: '.swiper-pagination', clickable: true },
+    });
+  </script>
+</section>
+
+  <!-- Call to Action Section -->
+<section class="bg-gradient-to-r from-blue-50 to-blue-100 py-12 px-6 md:px-20 text-center rounded-lg shadow-md my-16">
+  <h2 class="text-3xl md:text-4xl font-bold text-[#1d3557] mb-4">Ready to Transform Your Event?</h2>
+  <p class="text-[#4b5563] text-lg mb-6">Invite Suresh Mohan Semwal to empower, enlighten, and energize your audience.</p>
+  <button onclick="openContactModal()" class="bg-[#1d3557] text-white px-6 py-3 rounded-md hover:bg-blue-900 transition-all">Get In Touch</button>
+</section>
+
+<!-- Contact Modal -->
+<div id="contactModal" class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center z-50">
+  <div class="bg-white p-8 rounded-xl shadow-lg w-full max-w-md">
+    <div class="flex justify-between items-center mb-4">
+      <h3 class="text-xl font-bold">Contact Us</h3>
+      <button onclick="closeContactModal()" class="text-gray-500 hover:text-gray-800">&times;</button>
+    </div>
+    <form class="space-y-4">
+      <input type="text" placeholder="Your Name" class="w-full p-3 border rounded-md">
+      <input type="email" placeholder="Your Email" class="w-full p-3 border rounded-md">
+      <textarea placeholder="Your Message" class="w-full p-3 border rounded-md h-28"></textarea>
+      <button type="submit" class="w-full bg-[#1d3557] text-white p-3 rounded-md hover:bg-blue-800">Send Message</button>
+    </form>
+  </div>
+</div>
+
+<script>
+  function openContactModal() {
+    document.getElementById('contactModal').classList.remove('hidden');
+  }
+  function closeContactModal() {
+    document.getElementById('contactModal').classList.add('hidden');
+  }
+</script>
+
+
+<!-- FAQs Section -->
+<section class="bg-[#f9fafb] py-16 px-6 md:px-20">
+  <h2 class="text-3xl md:text-4xl font-bold text-[#1d3557] text-center mb-10">Frequently Asked Questions</h2>
+  <div class="max-w-3xl mx-auto space-y-4">
+    <div class="border rounded-lg p-4 bg-white shadow cursor-pointer" onclick="toggleFAQ(this)">
+      <h4 class="font-semibold">What topics does Suresh Mohan Semwal cover?</h4>
+      <p class="mt-2 text-[#4b5563] hidden">Leadership, motivation, corporate strategy, life skills, emotional intelligence, and more.</p>
+    </div>
+    <div class="border rounded-lg p-4 bg-white shadow cursor-pointer" onclick="toggleFAQ(this)">
+      <h4 class="font-semibold">Can I invite him for a corporate event?</h4>
+      <p class="mt-2 text-[#4b5563] hidden">Absolutely! Just fill in the contact form above, and we’ll get back to you with the details.</p>
+    </div>
+    <div class="border rounded-lg p-4 bg-white shadow cursor-pointer" onclick="toggleFAQ(this)">
+      <h4 class="font-semibold">Are sessions customizable?</h4>
+      <p class="mt-2 text-[#4b5563] hidden">Yes, all sessions are tailored to meet your audience’s unique needs and goals.</p>
+    </div>
+  </div>
+</section>
+
+<script>
+  function toggleFAQ(el) {
+    const p = el.querySelector('p');
+    p.classList.toggle('hidden');
+  }
+</script>
+
+<!-- 🌟 Trusted Clients -->
+<section class="bg-gradient-to-r from-indigo-100 via-white to-indigo-50 py-20">
+  <div class="max-w-6xl mx-auto px-4 text-center" data-aos="fade-up">
+    <h2 class="text-3xl md:text-4xl font-bold text-indigo-900 mb-14 drop-shadow-md">🌟 Trusted by Leading Brands</h2>
+
+    <!-- Swiper -->
+    <div class="swiper clientSwiper !overflow-visible">
+      <div class="swiper-wrapper items-center">
+       
+
+
+        <!-- Slides -->
+        <div class="swiper-slide flex flex-col items-center space-y-2">
+          <img src="https://logo.clearbit.com/tcs.com" alt="TCS" class="h-12 object-contain" />
+          <p class="text-indigo-800 text-sm font-medium">TCS</p>
+        </div>
+        <div class="swiper-slide flex flex-col items-center space-y-2">
+          <img src="https://logo.clearbit.com/jcb.com" alt="JCB" class="h-12 object-contain" />
+          <p class="text-indigo-800 text-sm font-medium">JCB</p>
+        </div>
+        <div class="swiper-slide flex flex-col items-center space-y-2">
+          <img src="https://logo.clearbit.com/wipro.com" alt="Wipro" class="h-12 object-contain" />
+          <p class="text-indigo-800 text-sm font-medium">Wipro</p>
+        </div>
+        <div class="swiper-slide flex flex-col items-center space-y-2">
+          <img src="https://logo.clearbit.com/hindustanpetroleum.com" alt="HPCL" class="h-12 object-contain" />
+          <p class="text-indigo-800 text-sm font-medium">HPCL</p>
+        </div>
+        <div class="swiper-slide flex flex-col items-center space-y-2">
+          <img src="https://logo.clearbit.com/accenture.com" alt="Accenture" class="h-12 object-contain" />
+          <p class="text-indigo-800 text-sm font-medium">Accenture</p>
+        </div>
+        <div class="swiper-slide flex flex-col items-center space-y-2">
+          <img src="https://logo.clearbit.com/ntpc.co.in" alt="NTPC" class="h-12 object-contain" />
+          <p class="text-indigo-800 text-sm font-medium">NTPC</p>
+        </div>
+       </div>  
+      </div>
+    </div>
+  </div>
+
+</section>  <!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    new Swiper(".clientSwiper", {
+      loop: true,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+      slidesPerView: 2,
+      spaceBetween: 20,
+      breakpoints: {
+        640: { slidesPerView: 3 },
+        768: { slidesPerView: 4 },
+        1024: { slidesPerView: 5 },
+      },
+    });
+  });
+</script> 
+
+
+
+
+
+
+<section class="relative text-white mt-20 overflow-clip z-0">
+
+  <!-- 📽️ Background Video -->
+  <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover z-[-1] opacity-60">
+    <source src="video2.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- 🎨 Gradient Overlay for Better Text Contrast -->
+  <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/80 z-0"></div>
+
+  <!-- 📦 Footer Content -->
+  <footer class="relative z-10 bg-black/50 backdrop-blur-sm">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 pt-16 pb-10 px-6">
+
+      <!-- 🔗 Explore Links -->
+      <div>
+        <h3 class="text-2xl font-extrabold mb-6 text-yellow-300">Explore</h3>
+        <ul class="space-y-3 text-indigo-100 text-lg font-medium">
+          <li><a href="index.html" class="hover:text-yellow-400 transition">🏠 Home</a></li>
+          <li><a href="about.html" class="hover:text-yellow-400 transition">👤 About</a></li>
+          <li><a href="services.html" class="hover:text-yellow-400 transition">🛠️ Services</a></li>
+          <li><a href="resources.html" class="hover:text-yellow-400 transition">📚 Free Resources</a></li>
+          <li><a href="testimonials.html" class="hover:text-yellow-400 transition">💬 Testimonials</a></li>
+          <li><a href="media.html" class="hover:text-yellow-400 transition">📺 Media</a></li>
+          <li><a href="contact.html" class="hover:text-yellow-400 transition">📞 Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- 🙋 About -->
+      <div>
+        <h3 class="text-2xl font-extrabold mb-6 text-yellow-300">About</h3>
+        <p class="text-indigo-100 text-lg leading-relaxed">
+          Suresh Mohan Semwal is a leadership speaker, clarity mentor, and personal growth coach helping people thrive through transformation.
+        </p>
+      </div>
+
+      <!-- 🌐 Social Media Icons -->
+      <div>
+        <h3 class="text-2xl font-extrabold mb-6 text-yellow-300">Connect</h3>
+        <div class="flex gap-5 text-2xl">
+          <a href="https://youtube.com/c/SureshMohanSemwalMotivation" target="_blank" class="hover:text-red-500">
+            <i class="fab fa-youtube"></i>
+          </a>
+          <a href="https://possiblers.com" target="_blank" class="hover:text-indigo-300">
+            <i class="fas fa-globe"></i>
+          </a>
+          <a href="https://instagram.com/suresh.m.semwal" target="_blank" class="hover:text-pink-400">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://linkedin.com/in/sureshsemwal" target="_blank" class="hover:text-blue-400">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="https://sureshmohansemwal.blogspot.com" target="_blank" class="hover:text-gray-300">
+            <i class="fas fa-blog"></i>
+          </a>
+          <a href="https://facebook.com/sureshmohansemwal" target="_blank" class="hover:text-blue-500">
+            <i class="fab fa-facebook"></i>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- 📄 Footer Bottom -->
+    <div class="text-center mt-14 border-t border-indigo-800 pt-5 text-sm text-indigo-300">
+      &copy; 2025 <span class="text-yellow-400">Suresh Mohan Semwal</span>. All rights reserved.
+    </div>
+  </footer>
+</section>
+
+
+<script>
+  const quotes = [
+    "Leadership is not about being the best. It’s about making everyone else better.",
+    "Your communication is your power. Shape it wisely.",
+    "Clarity is the spark that ignites transformation.",
+    "Courage doesn’t roar; it’s the quiet voice that whispers, ‘try again.’",
+    "Real change begins when you believe in your inner power."
+  ];
+
+  const quoteBox = document.getElementById('quoteBox');
+  let index = 0;
+
+  function showQuote() {
+    quoteBox.style.opacity = '0';
+
+    setTimeout(() => {
+      quoteBox.innerHTML = `"${quotes[index]}"`;
+      quoteBox.style.opacity = '1';
+      index = (index + 1) % quotes.length;
+    }, 300);
+  }
+
+  showQuote();
+  setInterval(showQuote, 7000);
+</script>
+
+
+<script>
+  const toggleBtn = document.getElementById('mobile-menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  toggleBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+</script>
+
+
+</body>
+</html>

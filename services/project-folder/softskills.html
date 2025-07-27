@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Soft Skills Training - Suresh Mohan Semwal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/yourkitcode.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Merriweather:wght@700&display=swap" rel="stylesheet">
+
+  
+    <style>
+      body {
+    font-family: 'Inter', sans-serif;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: 'Merriweather', serif;
+  }
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+    <style>
+  .glass-card {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(14px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  }
+</style>
+
+
+  </head>
+ <body class="font-sans text-gray-900 bg-gray-50">
+<!-- 🌟 Responsive Navbar with Working Dropdown -->
+<nav class="bg-white/70 backdrop-blur-lg shadow-md sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between h-16 items-center">
+      
+      <!-- Logo / Brand -->
+      <div class="flex-shrink-0 text-xl font-bold text-blue-700">SURESH MOHAN SEMWAL</div>
+
+      <!-- Desktop Menu -->
+      <div class="hidden md:flex space-x-8 items-center text-gray-800 font-medium">
+        <a href="index.html" class="hover:text-blue-600 transition">Home</a>
+        <a href="about.html" class="hover:text-blue-600 transition">About</a>
+
+        <!-- 🔽 Services Dropdown -->
+        <div class="relative group">
+          <button class="hover:text-blue-600 transition flex items-center gap-1">
+            Services
+            <svg class="w-4 h-4 transition-transform transform group-hover:rotate-180" fill="none" stroke="currentColor" stroke-width="2"
+              viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+
+          <div class="absolute left-0 mt-2 w-64 bg-white rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible hover:opacity-100 hover:visible transition-all duration-300 z-50">
+            <a href="services.html" class="block px-4 py-2 hover:bg-blue-100 font-semibold">All Services</a>
+            <hr class="border-gray-200 my-1">
+            <a href="services/project-folder/keynote.html" class="block px-4 py-2 hover:bg-blue-100">Keynote Speaking</a>
+            <a href="services/project-folder/leadership.html" class="block px-4 py-2 hover:bg-blue-100">Leadership Development</a>
+            <a href="services/project-folder/softskills.html" class="block px-4 py-2 hover:bg-blue-100">Soft Skills Workshops</a>
+            <a href="services/project-folder/motivational.html" class="block px-4 py-2 hover:bg-blue-100">Motivational Speaking</a>
+          </div>
+        </div>
+
+        <a href="testimonials.html" class="hover:text-blue-600 transition">Testimonials</a>
+        <a href="blogs.html" class="hover:text-blue-600 transition">Blogs</a>
+        <a href="media.html" class="hover:text-blue-600 transition">Media</a>
+       <a href="resources.html" class="hover:text-blue-600 transition">Resources</a>
+        <a href="contact.html" class="hover:text-blue-600 transition">Contact</a>
+      </div>
+
+      <!-- Hamburger Button for Mobile -->
+      <div class="md:hidden">
+        <button id="mobile-menu-toggle" class="focus:outline-none text-gray-800">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 📱 Mobile Menu -->
+  <div id="mobile-menu" class="md:hidden hidden px-4 pt-4 pb-6 space-y-3 bg-white shadow">
+    <a href="index.html" class="block hover:text-blue-600">Home</a>
+    <a href="about.html" class="block hover:text-blue-600">About</a>
+
+    <details class="group">
+      <summary class="cursor-pointer hover:text-blue-600 font-semibold">Services</summary>
+      <div class="pl-4 mt-2 space-y-2">
+        <a href="services.html" class="block hover:text-blue-600">All Services</a>
+        <a href="services/project-folder/keynote.html" class="block hover:text-blue-600">Keynote Speaking</a>
+        <a href="services/project-folder/leadership.html" class="block hover:text-blue-600">Leadership Development</a>
+        <a href="services/project-folder/softskills.html" class="block hover:text-blue-600">Soft Skills Workshops</a>
+        <a href="services/project-folder/motivational.html" class="block hover:text-blue-600">Motivational Speaking</a>
+      </div>
+    </details>
+
+    <a href="testimonials.html" class="block hover:text-blue-600">Testimonials</a>
+    <a href="blogs.html" class="block hover:text-blue-600">Blogs</a>
+    <a href="media.html" class="block hover:text-blue-600">Media</a>
+    <a href="resources.html" class="block hover:text-blue-600">Resources</a>
+    <a href="contact.html" class="block hover:text-blue-600">Contact</a>
+  </div>
+</nav>
+ 
+  <!-- Hero Section -->
+<section class="relative min-h-[60vh] md:min-h-[50vh] flex items-center justify-center text-center px-6 overflow-hidden">
+  <!-- Background Image -->
+  <div class="absolute inset-0">
+    <img src="../../../blog-posts/4.jpeg" alt="Soft Skills Hero" class="w-full h-full object-cover brightness-75" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+  </div>
+
+  <!-- Hero Text -->
+  <div class="relative z-10 max-w-3xl text-white" data-aos="fade-up">
+    <h1 class="text-4xl md:text-5xl font-extrabold leading-tight mb-4 drop-shadow-lg">Mastering Soft Skills</h1>
+    <p class="text-lg md:text-xl font-light max-w-2xl mx-auto text-gray-200">Empower your communication, empathy, leadership, and resilience to thrive in any personal or professional arena.</p>
+    <a href="#journey" class="mt-8 inline-block bg-white text-indigo-700 font-semibold px-6 py-3 rounded-full hover:bg-indigo-100 transition shadow-md">Start the Journey</a>
+  </div>
+</section>
+
+<!-- Section Right After Hero -->
+<section id="journey" class="relative bg-white py-20 px-6">
+  <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center" data-aos="fade-up">
+    <div>
+      <img src="sms3.png" alt="Teamwork" class="rounded-2xl shadow-xl w-full max-w-md mx-auto">
+    </div>
+    <div class="text-center md:text-left">
+      <h2 class="text-3xl font-bold text-indigo-800 mb-4">Why Soft Skills Matter</h2>
+      <p class="text-gray-700 text-lg leading-relaxed">In today’s world, your ability to communicate, adapt, and lead is more valuable than ever. From managing teams to building relationships — soft skills are your power tools.</p>
+      <ul class="mt-6 space-y-3 text-gray-700 list-disc list-inside text-left">
+        <li>Speak with clarity and confidence</li>
+        <li>Master empathy and active listening</li>
+        <li>Lead with emotional intelligence</li>
+        <li>Thrive in team dynamics & conflict</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<div id="scroll-bar" class="fixed top-0 left-0 h-1 bg-indigo-600 z-50"></div>
+<section class="py-20 px-6 bg-gradient-to-b from-white via-purple-50 to-white">
+  <div class="max-w-7xl mx-auto text-center mb-12">
+    <h3 class="text-3xl font-bold text-indigo-700">Core Skills & Growth Journey</h3>
+    <p class="text-gray-600 mt-2 text-lg">Blending the skills that shape success with the journey that brings transformation.</p>
+  </div>
+
+  <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12">
+    <!-- Key Skills -->
+    <div class="space-y-6">
+      <div class="glass-card flex items-start gap-4 p-6 rounded-xl shadow-md bg-white">
+        <i class="fas fa-comments text-blue-600 text-3xl"></i>
+        <div>
+          <h4 class="font-semibold text-lg text-indigo-800">Communication</h4>
+          <p class="text-gray-700 text-sm">Speak clearly, listen actively, and adapt your message to connect with anyone.</p>
+        </div>
+      </div>
+      <div class="glass-card flex items-start gap-4 p-6 rounded-xl shadow-md bg-white">
+        <i class="fas fa-heart text-pink-600 text-3xl"></i>
+        <div>
+          <h4 class="font-semibold text-lg text-indigo-800">Empathy</h4>
+          <p class="text-gray-700 text-sm">Understand and resonate with the emotions of others to build trust.</p>
+        </div>
+      </div>
+      <div class="glass-card flex items-start gap-4 p-6 rounded-xl shadow-md bg-white">
+        <i class="fas fa-users text-green-600 text-3xl"></i>
+        <div>
+          <h4 class="font-semibold text-lg text-indigo-800">Teamwork</h4>
+          <p class="text-gray-700 text-sm">Foster cooperation, manage conflict, and build healthy team dynamics.</p>
+        </div>
+      </div>
+      <div class="glass-card flex items-start gap-4 p-6 rounded-xl shadow-md bg-white">
+        <i class="fas fa-lightbulb text-yellow-600 text-3xl"></i>
+        <div>
+          <h4 class="font-semibold text-lg text-indigo-800">Adaptability</h4>
+          <p class="text-gray-700 text-sm">Stay calm and flexible while handling change, feedback, and uncertainty.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Journey Timeline -->
+    <div class="space-y-6">
+      <div class="glass-card flex items-start gap-4 p-6 rounded-xl shadow-md bg-white" data-aos="fade-up">
+        <i class="fas fa-ear-listen text-indigo-600 text-3xl"></i>
+        <div>
+          <h4 class="text-lg font-semibold text-indigo-800">1. Listening</h4>
+          <p class="text-gray-700 text-sm">The cornerstone of connection.</p>
+        </div>
+      </div>
+      <div class="glass-card flex items-start gap-4 p-6 rounded-xl shadow-md bg-white" data-aos="fade-up" data-aos-delay="100">
+        <i class="fas fa-face-smile text-pink-600 text-3xl"></i>
+        <div>
+          <h4 class="text-lg font-semibold text-indigo-800">2. Empathy</h4>
+          <p class="text-gray-700 text-sm">Feel what others feel.</p>
+        </div>
+      </div>
+      <div class="glass-card flex items-start gap-4 p-6 rounded-xl shadow-md bg-white" data-aos="fade-up" data-aos-delay="200">
+        <i class="fas fa-bullhorn text-blue-600 text-3xl"></i>
+        <div>
+          <h4 class="text-lg font-semibold text-indigo-800">3. Clarity</h4>
+          <p class="text-gray-700 text-sm">Speak with intent and confidence.</p>
+        </div>
+      </div>
+      <div class="glass-card flex items-start gap-4 p-6 rounded-xl shadow-md bg-white" data-aos="fade-up" data-aos-delay="300">
+        <i class="fas fa-chess-king text-green-700 text-3xl"></i>
+        <div>
+          <h4 class="text-lg font-semibold text-indigo-800">4. Leadership</h4>
+          <p class="text-gray-700 text-sm">Lead by influence and example.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Video Testimonial -->
+<section class="py-20 bg-purple-50 text-center">
+  <h3 class="text-3xl font-bold text-indigo-800 mb-8">Hear Their Stories</h3>
+
+  <!-- Floating Quote with AOS Fade Up -->
+  <p class="text-gray-600 text-lg italic mb-6 max-w-xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+    “This session changed the way I communicate. Truly transformational.”
+  </p>
+
+  <!-- Video with Overlay -->
+  <div class="relative w-full md:w-[90%] lg:w-[1000px] mx-auto h-[420px] shadow-lg rounded-xl overflow-hidden group" data-aos="zoom-in">
+    <iframe 
+      class="w-full h-full"
+      src="https://www.youtube.com/embed/EFKcgtkeMR8" 
+      frameborder="0" 
+      allowfullscreen
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share">
+    </iframe>
+
+    <!-- Play Button Overlay -->
+    <div class="absolute inset-0 flex items-center justify-center bg-black/30 opacity-0 group-hover:opacity-100 transition duration-300">
+      <div class="bg-white text-indigo-700 p-4 rounded-full shadow-lg">
+        <i class="fas fa-play text-xl"></i>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom Quote with AOS -->
+  <p class="max-w-2xl mx-auto text-gray-700 mt-4" data-aos="fade-up" data-aos-delay="400">
+    “Mr. Suresh Mohan Semwal is the real deal…” — Surender Sharma, PMP, CSM, USA
+  </p>
+</section>
+
+
+
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init({ once:true, duration:800 });</script>
+
+
+  <script>
+  const toggleBtn = document.getElementById('mobile-menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  toggleBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+</script>
+
+<script>
+  window.onscroll = () => {
+    const scrollBar = document.getElementById("scroll-bar");
+    const scrolled = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
+    scrollBar.style.width = scrolled + "%";
+  };
+</script>
+
+<script>
+  AOS.init({
+    duration: 1000,
+    once: true,
+  });
+</script>
+
+ <section class="relative text-white mt-20 overflow-hidden">
+  <!-- 📽️ Background Video -->
+  <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover z-[-1] opacity-60">
+    <source src="video2.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- 🎨 Gradient Overlay for Better Text Contrast -->
+  <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/80 z-0"></div>
+
+  <!-- 📦 Footer Content -->
+  <footer class="relative z-10 bg-black/50 backdrop-blur-sm">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 pt-16 pb-10 px-6">
+
+      <!-- 🔗 Explore Links -->
+      <div>
+        <h3 class="text-2xl font-extrabold mb-6 text-yellow-300">Explore</h3>
+        <ul class="space-y-3 text-indigo-100 text-lg font-medium">
+          <li><a href="index.html" class="hover:text-yellow-400 transition">🏠 Home</a></li>
+          <li><a href="about.html" class="hover:text-yellow-400 transition">👤 About</a></li>
+          <li><a href="services.html" class="hover:text-yellow-400 transition">🛠️ Services</a></li>
+          <li><a href="resources.html" class="hover:text-yellow-400 transition">📚 Free Resources</a></li>
+          <li><a href="testimonials.html" class="hover:text-yellow-400 transition">💬 Testimonials</a></li>
+          <li><a href="media.html" class="hover:text-yellow-400 transition">📺 Media</a></li>
+          <li><a href="contact.html" class="hover:text-yellow-400 transition">📞 Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- 🙋 About -->
+      <div>
+        <h3 class="text-2xl font-extrabold mb-6 text-yellow-300">About</h3>
+        <p class="text-indigo-100 text-lg leading-relaxed">
+          Suresh Mohan Semwal is a leadership speaker, clarity mentor, and personal growth coach helping people thrive through transformation.
+        </p>
+      </div>
+
+      <!-- 🌐 Social Media Icons -->
+      <div>
+        <h3 class="text-2xl font-extrabold mb-6 text-yellow-300">Connect</h3>
+        <div class="flex gap-5 text-2xl">
+          <a href="https://youtube.com/c/SureshMohanSemwalMotivation" target="_blank" class="hover:text-red-500">
+            <i class="fab fa-youtube"></i>
+          </a>
+          <a href="https://possiblers.com" target="_blank" class="hover:text-indigo-300">
+            <i class="fas fa-globe"></i>
+          </a>
+          <a href="https://instagram.com/suresh.m.semwal" target="_blank" class="hover:text-pink-400">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://linkedin.com/in/sureshsemwal" target="_blank" class="hover:text-blue-400">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="https://sureshmohansemwal.blogspot.com" target="_blank" class="hover:text-gray-300">
+            <i class="fas fa-blog"></i>
+          </a>
+          <a href="https://facebook.com/sureshmohansemwal" target="_blank" class="hover:text-blue-500">
+            <i class="fab fa-facebook"></i>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- 📄 Footer Bottom -->
+    <div class="text-center mt-14 border-t border-indigo-800 pt-5 text-sm text-indigo-300">
+      &copy; 2025 <span class="text-yellow-400">Suresh Mohan Semwal</span>. All rights reserved.
+    </div>
+  </footer>
+</section>
+
+
+</body>
+</html>

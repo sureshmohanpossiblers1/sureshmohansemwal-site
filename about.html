@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About | Suresh Mohan Semwal</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <!-- ✅ Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    .carousel-btn { background: rgba(255,255,255,0.9); }
+    .card-3d { transition: all 0.3s ease-in-out; }
+    .card-3d:hover { transform: translateY(-8px) scale(1.03); box-shadow: 0 20px 30px rgba(0,0,0,0.15); }
+  </style>
+</head>
+<body class="bg-white font-inter text-gray-800">
+
+  <!-- 🌟 Responsive Navbar with Working Dropdown -->
+<nav class="bg-white/70 backdrop-blur-lg shadow-md sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between h-16 items-center">
+      
+      <!-- Logo / Brand -->
+      <div class="flex-shrink-0 text-xl font-bold text-blue-700">SURESH MOHAN SEMWAL</div>
+
+      <!-- Desktop Menu -->
+      <div class="hidden md:flex space-x-8 items-center text-gray-800 font-medium">
+        <a href="index.html" class="hover:text-blue-600 transition">Home</a>
+        <a href="about.html" class="hover:text-blue-600 transition">About</a>
+
+        <!-- 🔽 Services Dropdown -->
+        <div class="relative group">
+          <button class="hover:text-blue-600 transition flex items-center gap-1">
+            Services
+            <svg class="w-4 h-4 transition-transform transform group-hover:rotate-180" fill="none" stroke="currentColor" stroke-width="2"
+              viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+
+          <div class="absolute left-0 mt-2 w-64 bg-white rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible hover:opacity-100 hover:visible transition-all duration-300 z-50">
+            <a href="services.html" class="block px-4 py-2 hover:bg-blue-100 font-semibold">All Services</a>
+            <hr class="border-gray-200 my-1">
+            <a href="services/project-folder/keynote.html" class="block px-4 py-2 hover:bg-blue-100">Keynote Speaking</a>
+            <a href="services/project-folder/leadership.html" class="block px-4 py-2 hover:bg-blue-100">Leadership Development</a>
+            <a href="services/project-folder/softskills.html" class="block px-4 py-2 hover:bg-blue-100">Soft Skills Workshops</a>
+            <a href="services/project-folder/motivational.html" class="block px-4 py-2 hover:bg-blue-100">Motivational Speaking</a>
+          </div>
+        </div>
+        <a href="resources.html" class="hover:text-blue-600 transition">Free Resources</a>
+        <a href="testimonials.html" class="hover:text-blue-600 transition">Testimonials</a>
+        <a href="blogs.html" class="hover:text-blue-600 transition">Blogs</a>
+        <a href="media.html" class="hover:text-blue-600 transition">Media</a>
+        <a href="contact.html" class="hover:text-blue-600 transition">Contact</a>
+      </div>
+
+      <!-- Hamburger Button for Mobile -->
+      <div class="md:hidden">
+        <button id="mobile-menu-toggle" class="focus:outline-none text-gray-800">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 📱 Mobile Menu -->
+  <div id="mobile-menu" class="md:hidden hidden px-4 pt-4 pb-6 space-y-3 bg-white shadow">
+    <a href="index.html" class="block hover:text-blue-600">Home</a>
+    <a href="about.html" class="block hover:text-blue-600">About</a>
+
+    <details class="group">
+      <summary class="cursor-pointer hover:text-blue-600 font-semibold">Services</summary>
+      <div class="pl-4 mt-2 space-y-2">
+        <a href="services.html" class="block hover:text-blue-600">All Services</a>
+        <a href="services/project-folder/keynote.html" class="block hover:text-blue-600">Keynote Speaking</a>
+        <a href="services/project-folder/leadership.html" class="block hover:text-blue-600">Leadership Development</a>
+        <a href="services/project-folder/softskills.html" class="block hover:text-blue-600">Soft Skills Workshops</a>
+        <a href="services/project-folder/motivational.html" class="block hover:text-blue-600">Motivational Speaking</a>
+      </div>
+    </details>
+
+    <a href="testimonials.html" class="block hover:text-blue-600">Testimonials</a>
+    <a href="blogs.html" class="block hover:text-blue-600">Blogs</a>
+    <a href="media.html" class="block hover:text-blue-600">Media</a>
+    <a href="resources.html" class="block hover:text-blue-600">Free Resources</a>
+    <a href="contact.html" class="block hover:text-blue-600">Contact</a>
+  </div>
+</nav>
+
+
+
+  <!-- Hero Portrait Carousel -->
+  <section class="relative max-w-6xl mx-auto py-12">
+    <button onclick="scrollHero(-1)" class="absolute left-4 top-1/2 transform -translate-y-1/2 carousel-btn p-2 rounded-full shadow">◀</button>
+    <div id="heroCarousel" class="flex overflow-x-auto no-scrollbar scroll-smooth space-x-6 px-4">
+      <img src="1.png" class="min-w-[320px] object-cover rounded-lg" alt="Suresh Semwal">
+      <img src="12.png" class="min-w-[320px] object-cover rounded-lg" alt="Suresh Semwal speaking">
+      <img src="15.png" class="min-w-[320px] object-cover rounded-lg" alt="Suresh Semwal workshop">
+    </div>
+    <button onclick="scrollHero(1)" class="absolute right-4 top-1/2 transform -translate-y-1/2 carousel-btn p-2 rounded-full shadow">▶</button>
+  </section>
+
+  <script>
+    function scrollHero(dir) {
+      const c = document.getElementById('heroCarousel');
+      c.scrollBy({ left: dir * (c.firstElementChild.clientWidth + 24), behavior: 'smooth' });
+    }
+  </script>
+
+  <!-- Quote -->
+  <section class="max-w-4xl mx-auto text-center italic text-gray-500 mb-8" data-aos="fade-up">
+    “I cannot teach anybody anything. I can only make them think.” – Inspired by Socratic methods
+  </section>
+
+  <!-- About Text -->
+  <section class="max-w-5xl mx-auto px-6 py-8" data-aos="fade-up">
+    <h1 class="text-4xl font-bold mb-4 font-['Playfair_Display'] text-blue-800">Who is Suresh Mohan Semwal?</h1>
+    <p class="text-lg leading-relaxed mb-4">
+      Visionary Leader • Co‑Founder of <strong>The Possiblers</strong> • International Speaker • Certified Coach (ICF‑ACC, EMCC EQA). He blends mindfulness, powerful storytelling, and action-focused strategies to shift perspectives and drive purpose-led growth.
+    </p>
+    <p class="text-lg leading-relaxed">
+      Across 600+ workshops in 9+ countries, his transformative teachings have impacted over 600,000 lives. He’s a pillar of values-driven transformation and personal resilience.
+    </p>
+  </section>
+
+  <!-- Philosophy & Passion -->
+  <section class="bg-blue-50 py-10" data-aos="fade-up">
+    <div class="max-w-5xl mx-auto px-6 space-y-6">
+      <h2 class="text-3xl font-bold text-center">Philosophy & Passion</h2>
+      <p class="text-center text-lg leading-relaxed">
+        Believing that true learning begins within, Suresh uses Socratic questioning to guide individuals in discovering their own answers. He’s passionate about nurturing leaders who drive impact while staying rooted in humility.
+      </p>
+    </div>
+  </section>
+
+  <!-- Credentials & Metrics -->
+  <section class="py-10" data-aos="fade-up">
+    <div class="max-w-5xl mx-auto px-6 grid md:grid-cols-2 gap-y-6">
+      <div>
+        <h3 class="text-xl font-semibold mb-2">Certified Credentials</h3>
+        <ul class="list-disc ml-6 space-y-1">
+          <li>ICF‑ACC Coach</li>
+          <li>EMCC EQA Practitioner</li>
+          <li>Accredited in Transactional Analysis, Neuro‑Linguistic Programming</li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-xl font-semibold mb-2">Global Reach</h3>
+        <ul class="list-disc ml-6 space-y-1">
+          <li>UK, Bahrain, Singapore</li>
+          <li>Canada, Germany, Nepal, Bangladesh</li>
+          <li>600+ industry-leadership sessions</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Career Highlights Cards -->
+  <section class="bg-gray-100 py-10">
+    <h2 class="text-3xl font-bold text-center mb-8" data-aos="fade-up">Career Highlights</h2>
+    <div class="max-w-5xl mx-auto px-6 grid md:grid-cols-2 gap-6">
+      <!-- cards -->
+      <div class="bg-white rounded-xl shadow-lg p-6 card-3d" data-aos="fade-up"><h3 class="font-semibold text-xl mb-2">Co‑Founder, The Possiblers</h3><p>Building transformative learning solutions that empower individuals and organisations.</p></div>
+      <div class="bg-white rounded-xl shadow-lg p-6 card-3d" data-aos="fade-up" data-aos-delay="100"><h3 class="font-semibold text-xl mb-2">Head – CII‑Delhi SME Taskforce</h3><p>Led capacity-building programs across Travel, Education & Construction sectors.</p></div>
+      <div class="bg-white rounded-xl shadow-lg p-6 card-3d" data-aos="fade-up" data-aos-delay="200"><h3 class="font-semibold text-xl mb-2">Global Coach & Speaker</h3><p>Delivered leadership programs in UK, Bahrain, Singapore, Nepal, Canada, Germany & Bangladesh.</p></div>
+      <div class="bg-white rounded-xl shadow-lg p-6 card-3d" data-aos="fade-up" data-aos-delay="300"><h3 class="font-semibold text-xl mb-2">Certified (ICF, EMCC, NLP)</h3><p>Accredited in coaching modalities with a Socratic, action-oriented training style.</p></div>
+    </div>
+  </section>
+
+  <!-- VIDEO SHORTS SECTION -->
+<section class="bg-gray-100 py-12">
+  <div class="max-w-5xl mx-auto px-6">
+    <h2 class="text-3xl font-bold text-center mb-8" data-aos="fade-up">Video Shorts</h2>
+    <div class="grid sm:grid-cols-2 gap-6" data-aos="fade-up" data-aos-delay="100">
+      
+      <!-- Video 1 Card -->
+      <div class="bg-white rounded-xl shadow-lg overflow-hidden card-3d p-4">
+        <video src="video1.mp4" controls class="w-full rounded-lg max-h-60 object-cover"></video>
+        <p class="mt-3 text-center font-medium text-gray-700">Mastering Clarity in Leadership</p>
+      </div>
+
+      <!-- Video 2 Card -->
+      <div class="bg-white rounded-xl shadow-lg overflow-hidden card-3d p-4">
+        <video src="video2.mp4" controls class="w-full rounded-lg max-h-60 object-cover"></video>
+        <p class="mt-3 text-center font-medium text-gray-700">Mindset Reset in 50 Seconds</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- 📚 OUR COURSES SECTION -->
+<section class="bg-white py-20 px-4 sm:px-6">
+  <div class="max-w-4xl mx-auto text-center mb-12">
+    <h2 class="text-4xl font-bold text-indigo-800 mb-4">Our Courses</h2>
+    <p class="text-gray-600">Courses curated by Suresh Mohan Semwal to elevate personal mastery, communication, productivity, and emotional intelligence.</p>
+  </div>
+
+  <div class="max-w-6xl mx-auto relative">
+    <!-- ⬅️ Scroll Left Button -->
+    <button id="scrollLeft" class="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 bg-white shadow-md border border-gray-200 p-2 rounded-full hover:bg-gray-100">
+      ◀
+    </button>
+
+    <!-- ➡️ Scroll Right Button -->
+    <button id="scrollRight" class="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 bg-white shadow-md border border-gray-200 p-2 rounded-full hover:bg-gray-100">
+      ▶
+    </button>
+
+    <!-- 🧭 Scrollable Cards -->
+    <div id="courseScroll" class="flex gap-6 overflow-x-auto pb-4 scroll-smooth px-10 hide-scrollbar">
+
+      <!-- COURSE CARD 1 -->
+      <a href="https://possiblers7831.graphy.com/courses/Power-of-Responsibility---Motivational-Seminar-680f5b681412cd4bf2db30aa-680f5b681412cd4bf2db30aa" target="_blank"
+         class="min-w-[300px] flex-shrink-0 bg-white rounded-2xl shadow-lg border border-indigo-100 hover:shadow-indigo-300 transition hover:scale-[1.02] duration-300 ease-in-out">
+        <img src="course1.jpg" alt="Power of Responsibility" class="rounded-t-2xl w-full h-48 object-cover">
+        <div class="p-4">
+          <h4 class="text-lg font-semibold text-indigo-800">Power of Responsibility</h4>
+        </div>
+      </a>
+
+      <!-- COURSE CARD 2 -->
+      <a href="https://possiblers7831.graphy.com/courses/Communicate-to-Succeed-679b06c24be5e32af5f29d55-679b06c24be5e32af5f29d55" target="_blank"
+         class="min-w-[300px] flex-shrink-0 bg-white rounded-2xl shadow-lg border border-indigo-100 hover:shadow-indigo-300 transition hover:scale-[1.02] duration-300 ease-in-out">
+        <img src="course2.jpg" alt="Communicate to Succeed" class="rounded-t-2xl w-full h-48 object-cover">
+        <div class="p-4">
+          <h4 class="text-lg font-semibold text-indigo-800">Communicate to Succeed</h4>
+        </div>
+      </a>
+
+      <!-- COURSE CARD 3 -->
+      <a href="https://possiblers7831.graphy.com/courses/Boosting-Sales-Team-Productivity-66950c512c42ca7d2902c76f-66950c512c42ca7d2902c76f" target="_blank"
+         class="min-w-[300px] flex-shrink-0 bg-white rounded-2xl shadow-lg border border-indigo-100 hover:shadow-indigo-300 transition hover:scale-[1.02] duration-300 ease-in-out">
+        <img src="course3.jpg" alt="Boosting Sales Productivity" class="rounded-t-2xl w-full h-48 object-cover">
+        <div class="p-4">
+          <h4 class="text-lg font-semibold text-indigo-800">Boosting Sales Productivity</h4>
+        </div>
+      </a>
+
+      <!-- COURSE CARD 4 -->
+      <a href="https://possiblers7831.graphy.com/courses/Emotional-Intelligence-through-Transactional-Analysis-66a8b99c309e684935662196-66a8b99c309e684935662196" target="_blank"
+         class="min-w-[300px] flex-shrink-0 bg-white rounded-2xl shadow-lg border border-indigo-100 hover:shadow-indigo-300 transition hover:scale-[1.02] duration-300 ease-in-out">
+        <img src="course4.jpg" alt="Emotional Intelligence" class="rounded-t-2xl w-full h-48 object-cover">
+        <div class="p-4">
+          <h4 class="text-lg font-semibold text-indigo-800">Emotional Intelligence</h4>
+        </div>
+      </a>
+
+    </div>
+  </div>
+
+  <!-- 🎯 Hide Scrollbar CSS -->
+  <style>
+    .hide-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .hide-scrollbar {
+      -ms-overflow-style: none; /* IE/Edge */
+      scrollbar-width: none; /* Firefox */
+    }
+  </style>
+
+  <!-- 🚀 Scroll Script -->
+  <script>
+    const scrollContainer = document.getElementById("courseScroll");
+    const scrollAmount = 320;
+
+    document.getElementById("scrollLeft").addEventListener("click", () => {
+      scrollContainer.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+    });
+
+    document.getElementById("scrollRight").addEventListener("click", () => {
+      scrollContainer.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    });
+  </script>
+</section>
+
+<!-- 📚 BOOKS SECTION (Manual Scroll with Buttons) -->
+<section class="bg-white py-20 px-4 sm:px-6">
+  <div class="max-w-4xl mx-auto text-center mb-12">
+    <h2 class="text-4xl font-bold text-indigo-800 mb-4">📚 Books by Suresh Mohan Semwal</h2>
+    <p class="text-gray-600">Browse through books designed to uplift your leadership and personal journey.</p>
+  </div>
+
+  <div class="max-w-7xl mx-auto relative">
+    <!-- ⬅️ Scroll Left Button -->
+    <button id="bookScrollLeft" class="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 bg-white shadow-md border border-gray-200 p-2 rounded-full hover:bg-gray-100">
+      ◀
+    </button>
+
+    <!-- ➡️ Scroll Right Button -->
+    <button id="bookScrollRight" class="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 bg-white shadow-md border border-gray-200 p-2 rounded-full hover:bg-gray-100">
+      ▶
+    </button>
+
+    <!-- 🧭 Scrollable Book Cards -->
+    <div id="bookScroll" class="flex gap-6 overflow-x-auto pb-4 px-10 no-scrollbar scroll-smooth">
+
+      <!-- Book 1 -->
+      <div class="min-w-[320px] flex-shrink-0 bg-white rounded-xl shadow-lg overflow-hidden card-3d transition hover:scale-[1.02] duration-300">
+        <img src="1.jpg" alt="Best Management Quotes" class="w-full h-64 object-contain bg-white">
+        <div class="p-4 text-center">
+          <h3 class="font-semibold text-indigo-800">Best Management Quotes</h3>
+        </div>
+      </div>
+
+      <!-- Book 2 -->
+      <div class="min-w-[320px] flex-shrink-0 bg-white rounded-xl shadow-lg overflow-hidden card-3d transition hover:scale-[1.02] duration-300">
+        <img src="3.jpg" alt="Power of Responsibility" class="w-full h-64 object-contain bg-white">
+        <div class="p-4 text-center">
+          <h3 class="font-semibold text-indigo-800">Power of Responsibility</h3>
+        </div>
+      </div>
+
+      <!-- Book 3 -->
+      <div class="min-w-[320px] flex-shrink-0 bg-white rounded-xl shadow-lg overflow-hidden card-3d transition hover:scale-[1.02] duration-300">
+        <img src="5.jpg" alt="Be a Humble Winner" class="w-full h-64 object-contain bg-white">
+        <div class="p-4 text-center">
+          <h3 class="font-semibold text-indigo-800">Be a Humble Winner</h3>
+        </div>
+      </div>
+
+      <!-- Book 4 -->
+      <div class="min-w-[320px] flex-shrink-0 bg-white rounded-xl shadow-lg overflow-hidden card-3d transition hover:scale-[1.02] duration-300">
+        <img src="7.jpg" alt="Won in Life" class="w-full h-64 object-contain bg-white">
+        <div class="p-4 text-center">
+          <h3 class="font-semibold text-indigo-800">Won in Life</h3>
+        </div>
+      </div>
+
+      <!-- Book 5 -->
+      <div class="min-w-[320px] flex-shrink-0 bg-white rounded-xl shadow-lg overflow-hidden card-3d transition hover:scale-[1.02] duration-300">
+        <img src="10.jpg" alt="Celebrating Parenting" class="w-full h-64 object-contain bg-white">
+        <div class="p-4 text-center">
+          <h3 class="font-semibold text-indigo-800">Celebrating Parenting</h3>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 🧼 Scrollbar Hider -->
+  <style>
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+
+  <!-- 🔘 Scroll Buttons Script -->
+  <script>
+    const bookScroll = document.getElementById("bookScroll");
+    const bookStep = 340;
+
+    document.getElementById("bookScrollLeft").addEventListener("click", () => {
+      bookScroll.scrollBy({ left: -bookStep, behavior: "smooth" });
+    });
+
+    document.getElementById("bookScrollRight").addEventListener("click", () => {
+      bookScroll.scrollBy({ left: bookStep, behavior: "smooth" });
+    });
+  </script>
+</section>
+
+
+<!-- Media Gallery -->
+<section class="bg-gray-100 py-12" data-aos="fade-up">
+  <h2 class="text-3xl font-bold text-center mb-6 text-blue-900">Media Mentions</h2>
+
+  <p class="text-center text-gray-600 mb-8">Recognized by top publications for impactful work</p>
+  <div class="max-w-6xl mx-auto grid sm:grid-cols-2 lg:grid-cols-4 gap-6 px-6">
+    <div class="overflow-hidden rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
+      <img src="news1.png" class="w-full h-auto object-cover" alt="News 1">
+    </div>
+    <div class="overflow-hidden rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
+      <img src="news2.png" class="w-full h-auto object-cover" alt="News 2">
+    </div>
+    <div class="overflow-hidden rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
+      <img src="news3.png" class="w-full h-auto object-cover" alt="News 3">
+    </div>
+    <div class="overflow-hidden rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
+      <img src="news4.png" class="w-full h-auto object-cover" alt="News 4">
+    </div>
+  </div>
+</section>
+
+
+<!-- 💥 Impact Overview -->
+<section class="bg-gradient-to-br from-blue-50 to-blue-100 py-20" data-aos="fade-up">
+  <div class="max-w-6xl mx-auto text-center space-y-16 px-6">
+    <h2 class="text-4xl font-bold text-blue-800">Impact Overview</h2>
+    
+    <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-12">
+      
+      <!-- Participants -->
+      <div class="space-y-4">
+        <div class="w-16 h-16 mx-auto bg-white rounded-full flex items-center justify-center shadow-lg text-blue-600">
+          <!-- User Group Icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M17 20h5v-2a4 4 0 00-5-4h-1a4 4 0 00-5 4v2h5zM12 12a4 4 0 100-8 4 4 0 000 8z" />
+          </svg>
+        </div>
+        <div class="text-5xl font-extrabold text-blue-800 counter" data-target="600000">0</div>
+        <p class="text-lg text-blue-700">Participants</p>
+      </div>
+
+      <!-- Seminars -->
+      <div class="space-y-4">
+        <div class="w-16 h-16 mx-auto bg-white rounded-full flex items-center justify-center shadow-lg text-blue-600">
+          <!-- Presentation Chart -->
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M3 4a1 1 0 011-1h16a1 1 0 011 1v3H3V4zm18 5v11a1 1 0 01-1 1H4a1 1 0 01-1-1V9h18zM9 13H6v4h3v-4zm5-3h-3v7h3v-7zm5-2h-3v9h3V8z"/>
+          </svg>
+        </div>
+        <div class="text-5xl font-extrabold text-blue-800 counter" data-target="600">0</div>
+        <p class="text-lg text-blue-700">Seminars</p>
+      </div>
+
+      <!-- Countries -->
+      <div class="space-y-4">
+        <div class="w-16 h-16 mx-auto bg-white rounded-full flex items-center justify-center shadow-lg text-blue-600">
+          <!-- Globe -->
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 2a10 10 0 1010 10A10.011 10.011 0 0012 2zm6 10a7.951 7.951 0 01-.638 3.117L14 12V9h2a6.978 6.978 0 012 3zm-6-8a7.951 7.951 0 013.117.638L12 6H9V4a6.978 6.978 0 013-1zM4 12a8.006 8.006 0 0111.95-6.66L12 10v4l-3 3.95A8.006 8.006 0 014 12zm8 8a7.951 7.951 0 01-3.117-.638L12 18h3v2a6.978 6.978 0 01-3 1z"/>
+          </svg>
+        </div>
+        <div class="text-5xl font-extrabold text-blue-800 counter" data-target="9">0</div>
+        <p class="text-lg text-blue-700">Countries</p>
+      </div>
+
+      <!-- Satisfied Customers -->
+      <div class="space-y-4">
+        <div class="w-16 h-16 mx-auto bg-white rounded-full flex items-center justify-center shadow-lg text-blue-600">
+          <!-- Heart Happy -->
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12.1 21.55l-1.1-1.05C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 
+              7.5 3c1.74 0 3.41.81 4.5 2.09A6.003 6.003 0 0119.5 3 
+              C22.58 3 25 5.42 25 8.5c0 3.78-3.4 6.86-8.9 12l-1.1 1.05z"/>
+          </svg>
+        </div>
+        <div class="text-5xl font-extrabold text-blue-800 counter" data-target="600">0</div>
+        <p class="text-lg text-blue-700">Happy Clients</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- 🧠 Counter Script (Smooth) -->
+<script>
+  const counters = document.querySelectorAll('.counter');
+
+  const animateCount = (el) => {
+    const target = +el.getAttribute('data-target');
+    const duration = 3500;
+    const startTime = performance.now();
+
+    const update = (now) => {
+      const elapsed = now - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      const count = Math.floor(progress * target);
+      el.innerText = count + (progress < 1 ? '' : '+');
+      if (progress < 1) {
+        requestAnimationFrame(update);
+      }
+    };
+
+    requestAnimationFrame(update);
+  };
+
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        animateCount(entry.target);
+        obs.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.5 });
+
+  counters.forEach(counter => {
+    observer.observe(counter);
+  });
+</script>
+
+
+
+<!-- Contact Us Section -->
+<section class="bg-blue-600 py-12 text-white text-center" data-aos="fade-up">
+  <div class="max-w-3xl mx-auto px-6">
+    <h2 class="text-3xl font-bold mb-4 flex items-center justify-center gap-2">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 10l-6-6m0 0L9 10m6-6v12" />
+      </svg>
+      Have Questions or Collaboration Ideas?
+    </h2>
+    <p class="text-lg mb-6">We'd love to hear from you. Reach out and let's create something impactful together.</p>
+    <a href="contact.html" class="inline-block px-8 py-4 bg-white text-blue-700 font-semibold rounded-full shadow-md hover:bg-gray-100 transition duration-300">
+      Contact Us
+    </a>
+  </div>
+</section>
+
+
+
+<script>
+  const toggleBtn = document.getElementById('mobile-menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  toggleBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+</script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({ duration: 800, once: true });
+</script>
+
+<section class="relative text-white mt-20 overflow-hidden">
+  <!-- 📽️ Background Video -->
+  <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover z-[-1] opacity-60">
+    <source src="video2.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- 🎨 Gradient Overlay for Better Text Contrast -->
+  <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/80 z-0"></div>
+
+  <!-- 📦 Footer Content -->
+  <footer class="relative z-10 bg-black/50 backdrop-blur-sm">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 pt-16 pb-10 px-6">
+
+      <!-- 🔗 Explore Links -->
+      <div>
+        <h3 class="text-2xl font-extrabold mb-6 text-yellow-300">Explore</h3>
+        <ul class="space-y-3 text-indigo-100 text-lg font-medium">
+          <li><a href="index.html" class="hover:text-yellow-400 transition">🏠 Home</a></li>
+          <li><a href="about.html" class="hover:text-yellow-400 transition">👤 About</a></li>
+          <li><a href="services.html" class="hover:text-yellow-400 transition">🛠️ Services</a></li>
+          <li><a href="resources.html" class="hover:text-yellow-400 transition">📚 Free Resources</a></li>
+          <li><a href="testimonials.html" class="hover:text-yellow-400 transition">💬 Testimonials</a></li>
+          <li><a href="media.html" class="hover:text-yellow-400 transition">📺 Media</a></li>
+          <li><a href="contact.html" class="hover:text-yellow-400 transition">📞 Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- 🙋 About -->
+      <div>
+        <h3 class="text-2xl font-extrabold mb-6 text-yellow-300">About</h3>
+        <p class="text-indigo-100 text-lg leading-relaxed">
+          Suresh Mohan Semwal is a leadership speaker, clarity mentor, and personal growth coach helping people thrive through transformation.
+        </p>
+      </div>
+
+      <!-- 🌐 Social Media Icons -->
+      <div>
+        <h3 class="text-2xl font-extrabold mb-6 text-yellow-300">Connect</h3>
+        <div class="flex gap-5 text-2xl">
+          <a href="https://youtube.com/c/SureshMohanSemwalMotivation" target="_blank" class="hover:text-red-500">
+            <i class="fab fa-youtube"></i>
+          </a>
+          <a href="https://possiblers.com" target="_blank" class="hover:text-indigo-300">
+            <i class="fas fa-globe"></i>
+          </a>
+          <a href="https://instagram.com/suresh.m.semwal" target="_blank" class="hover:text-pink-400">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://linkedin.com/in/sureshsemwal" target="_blank" class="hover:text-blue-400">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="https://sureshmohansemwal.blogspot.com" target="_blank" class="hover:text-gray-300">
+            <i class="fas fa-blog"></i>
+          </a>
+          <a href="https://facebook.com/sureshmohansemwal" target="_blank" class="hover:text-blue-500">
+            <i class="fab fa-facebook"></i>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- 📄 Footer Bottom -->
+    <div class="text-center mt-14 border-t border-indigo-800 pt-5 text-sm text-indigo-300">
+      &copy; 2025 <span class="text-yellow-400">Suresh Mohan Semwal</span>. All rights reserved.
+    </div>
+  </footer>
+</section>
+
+</body>
+</html>  

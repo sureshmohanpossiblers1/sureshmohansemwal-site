@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Suresh Mohan Semwal</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://kit.fontawesome.com/a2e8f2c6f8.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <!-- Swiper CSS (head only) -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+<!-- Font Awesome for WhatsApp Icon -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+<!-- Swiper.js CSS -->
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+
+<!-- Swiper.js Script -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
+
+
+<style>
+    body { font-family: 'Outfit', sans-serif; }
+
+  
+  .animate-fade-in-up {
+    animation: fadeInUp 0.4s ease-out forwards;
+  }
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+
+  </style>
+</head>
+<body class="bg-slate-50 text-gray-800">
+ <!-- 🌟 Responsive Navbar with Working Dropdown -->
+<nav class="bg-white/70 backdrop-blur-lg shadow-md sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between h-16 items-center">
+      
+      <!-- Logo / Brand -->
+      <div class="flex-shrink-0 text-xl font-bold text-blue-700">SURESH MOHAN SEMWAL</div>
+
+      <!-- Desktop Menu -->
+      <div class="hidden md:flex space-x-8 items-center text-gray-800 font-medium">
+        <a href="index.html" class="hover:text-blue-600 transition">Home</a>
+        <a href="about.html" class="hover:text-blue-600 transition">About</a>
+
+        <!-- 🔽 Services Dropdown -->
+        <div class="relative group">
+          <button class="hover:text-blue-600 transition flex items-center gap-1">
+            Services
+            <svg class="w-4 h-4 transition-transform transform group-hover:rotate-180" fill="none" stroke="currentColor" stroke-width="2"
+              viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+
+          <div class="absolute left-0 mt-2 w-64 bg-white rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible hover:opacity-100 hover:visible transition-all duration-300 z-50">
+            <a href="services.html" class="block px-4 py-2 hover:bg-blue-100 font-semibold">All Services</a>
+            <hr class="border-gray-200 my-1">
+            <a href="services/project-folder/keynote.html" class="block px-4 py-2 hover:bg-blue-100">Keynote Speaking</a>
+            <a href="services/project-folder/leadership.html" class="block px-4 py-2 hover:bg-blue-100">Leadership Development</a>
+            <a href="services/project-folder/softskills.html" class="block px-4 py-2 hover:bg-blue-100">Soft Skills Workshops</a>
+            <a href="services/project-folder/motivational.html" class="block px-4 py-2 hover:bg-blue-100">Motivational Speaking</a>
+          </div>
+        </div>
+        <a href="resources.html" class="hover:text-blue-600 transition">Free Resources</a>
+        <a href="testimonials.html" class="hover:text-blue-600 transition">Testimonials</a>
+        <a href="blogs.html" class="hover:text-blue-600 transition">Blogs</a>
+        <a href="media.html" class="hover:text-blue-600 transition">Media</a>
+
+        <a href="contact.html" class="hover:text-blue-600 transition">Contact</a>
+      </div>
+
+      <!-- Hamburger Button for Mobile -->
+      <div class="md:hidden">
+        <button id="mobile-menu-toggle" class="focus:outline-none text-gray-800">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 📱 Mobile Menu -->
+  <div id="mobile-menu" class="md:hidden hidden px-4 pt-4 pb-6 space-y-3 bg-white shadow">
+    <a href="index.html" class="block hover:text-blue-600">Home</a>
+    <a href="about.html" class="block hover:text-blue-600">About</a>
+
+    <details class="group">
+      <summary class="cursor-pointer hover:text-blue-600 font-semibold">Services</summary>
+      <div class="pl-4 mt-2 space-y-2">
+        <a href="services.html" class="block hover:text-blue-600">All Services</a>
+        <a href="services/project-folder/keynote.html" class="block hover:text-blue-600">Keynote Speaking</a>
+        <a href="services/project-folder/leadership.html" class="block hover:text-blue-600">Leadership Development</a>
+        <a href="services/project-folder/softskills.html" class="block hover:text-blue-600">Soft Skills Workshops</a>
+        <a href="services/project-folder/motivational.html" class="block hover:text-blue-600">Motivational Speaking</a>
+      </div>
+    </details>
+
+    <a href="testimonials.html" class="block hover:text-blue-600">Testimonials</a>
+    <a href="blogs.html" class="block hover:text-blue-600">Blogs</a>
+    <a href="media.html" class="block hover:text-blue-600">Media</a>
+    <a href="resources.html" class="block hover:text-blue-600">Free Resources</a>
+    
+    <a href="contact.html" class="block hover:text-blue-600">Contact</a>
+  </div>
+</nav>
+
+<!-- HERO IMAGE TOP -->
+<section class="w-full">
+  <img src="ct.jpg" alt="Suresh Mohan Semwal Hero Image" class="w-full h-[300px] object-cover" />
+</section>
+
+<!-- WHO IS SURESH SECTION -->
+ 
+<section class="py-16 px-4 md:px-8 bg-white">
+  <div class="max-w-7xl mx-auto">
+    <!-- Centered Section Heading -->
+    <h2 class="text-3xl font-bold text-indigo-800 text-center mb-12">Who is Suresh Mohan Semwal?</h2>
+
+    <div class="grid md:grid-cols-3 gap-10 items-stretch">
+      <!-- LEFT: Info Cards -->
+      <div class="flex flex-col justify-between space-y-6">
+        <div class="bg-indigo-50 p-6 rounded-xl shadow-md flex-1">
+          <ul class="list-disc pl-6 space-y-2 text-gray-700 text-sm">
+            <li>Leadership Coach</li>
+            <li>Motivational Speaker</li>
+            <li>Corporate Trainer with 24+ years of experience</li>
+          </ul>
+        </div>
+        <div class="bg-indigo-50 p-6 rounded-xl shadow-md flex-1">
+          <ul class="list-disc pl-6 space-y-2 text-gray-700 text-sm">
+            <li>Transformed thousands across industries</li>
+            <li>Delivered 600000+ sessions globally</li>
+            <li>Believes in people-led change</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- CENTER: Image -->
+      <div class="flex justify-center items-center">
+        <img src="12.png" alt="Suresh Mohan Semwal" class="rounded-2xl shadow-xl border-4 border-white w-full max-h-[360px] object-contain" />
+      </div>
+
+      <!-- RIGHT: Services with Icons -->
+      <div>
+        <h3 class="text-xl font-bold text-indigo-800 mb-6 text-center">Services</h3>
+        <div class="grid grid-cols-2 sm:grid-cols-3 gap-6 justify-items-center text-center">
+          <div>
+            <img src="https://cdn-icons-png.flaticon.com/512/1946/1946436.png" alt="Leadership" class="w-10 h-10 mx-auto mb-2" />
+            <p class="text-sm">Leadership</p>
+          </div>
+          <div>
+            <img src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png" alt="Soft Skills" class="w-10 h-10 mx-auto mb-2" />
+            <p class="text-sm">Soft Skills</p>
+          </div>
+          <div>
+            <img src="https://cdn-icons-png.flaticon.com/512/1034/1034131.png" alt="Executive" class="w-10 h-10 mx-auto mb-2" />
+            <p class="text-sm">Executive</p>
+          </div>
+          <div>
+            <img src="https://cdn-icons-png.flaticon.com/512/1828/1828884.png" alt="Motivation" class="w-10 h-10 mx-auto mb-2" />
+            <p class="text-sm">Motivation</p>
+          </div>
+          <div>
+            <img src="https://cdn-icons-png.flaticon.com/512/888/888879.png" alt="Corporate" class="w-10 h-10 mx-auto mb-2" />
+            <p class="text-sm">Keynote</p>
+          </div>
+          <div>
+            <img src="https://cdn-icons-png.flaticon.com/512/2942/2942842.png" alt="Trainings" class="w-10 h-10 mx-auto mb-2" />
+            <p class="text-sm">Outbound</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 💌 CONTACT SECTION -->
+<section class="bg-slate-100 py-20 px-6" id="contact">
+  <div class="max-w-7xl mx-auto text-center mb-16">
+    <h2 class="text-4xl font-extrabold text-indigo-900">Let’s Connect</h2>
+    <p class="text-gray-600 mt-2 text-lg">Reach out to Suresh Sir or follow along on social platforms</p>
+  </div>
+
+  <div class="grid lg:grid-cols-3 gap-10 max-w-7xl mx-auto">
+    
+    <!-- 📍 ADDRESS CARD -->
+    <div class="bg-white p-8 rounded-3xl shadow-md flex flex-col justify-between min-h-[500px] hover:shadow-indigo-200 transition-all duration-300">
+      <div>
+        <h3 class="text-2xl font-bold text-indigo-800 mb-4">🏢 Possiblers Office</h3>
+        <p class="text-gray-700 font-medium leading-relaxed">
+          E-55, Jorbagh Lane,<br>Jorbagh, Delhi – 110003
+        </p>
+        <div class="mt-6 rounded-xl overflow-hidden shadow">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1752.7150142312297!2d77.2232582!3d28.5947889!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce30b7e229bbf%3A0x4aa41a1a6e317355!2sJor%20Bagh%2C%20New%20Delhi%2C%20Delhi%20110003!5e0!3m2!1sen!2sin!4v1688571058354"
+            width="100%" height="220" style="border:0;" loading="lazy" class="rounded-lg">
+          </iframe>
+        </div>
+      </div>
+    </div>
+
+    <!-- 🌐 SOCIALS CARD -->
+    <div class="bg-gradient-to-b from-sky-100 via-indigo-50 to-white p-8 rounded-3xl border border-indigo-100 shadow-md hover:shadow-indigo-200 transition-all duration-300">
+      <h3 class="text-2xl font-bold text-indigo-900 mb-6 text-center">🌐 Find Suresh Sir Online</h3>
+      <div class="space-y-4 text-base">
+        <a href="https://youtube.com/c/SureshMohanSemwalMotivation?sub_confirmation=1" target="_blank" class="flex items-center gap-3 text-red-600 font-medium hover:underline">
+          <i class="fab fa-youtube text-xl"></i> YouTube (Subscribe)
+        </a>
+        <a href="https://possiblers.com" target="_blank" class="flex items-center gap-3 text-indigo-700 font-medium hover:underline">
+          <i class="fas fa-globe text-xl"></i> Website (possiblers.com)
+        </a>
+        <a href="https://instagram.com/suresh.m.semwal" target="_blank" class="flex items-center gap-3 text-pink-600 font-medium hover:underline">
+          <i class="fab fa-instagram text-xl"></i> Instagram
+        </a>
+        <a href="https://linkedin.com/in/sureshsemwal" target="_blank" class="flex items-center gap-3 text-blue-700 font-medium hover:underline">
+          <i class="fab fa-linkedin text-xl"></i> LinkedIn
+        </a>
+        <a href="https://sureshmohansemwal.blogspot.com" target="_blank" class="flex items-center gap-3 text-gray-700 font-medium hover:underline">
+          <i class="fas fa-blog text-xl"></i> Blog
+        </a>
+        <a href="https://facebook.com/sureshmohansemwal" target="_blank" class="flex items-center gap-3 text-blue-800 font-medium hover:underline">
+          <i class="fab fa-facebook text-xl"></i> Facebook
+        </a>
+      </div>
+      <p class="italic text-center text-sm text-gray-600 mt-8">“Transforming people isn’t a profession, it’s a purpose.”</p>
+    </div>
+
+<!-- 👇 Your Let's Talk Card -->
+<div class="bg-white p-6 rounded-2xl shadow-xl max-w-md mx-auto text-center space-y-4 border border-indigo-200">
+  <h3 class="text-2xl font-bold text-indigo-800">Let’s Talk</h3>
+  <p class="text-gray-600 text-sm">Get in touch for speaking engagements or collaborations.</p>
+  <button onclick="document.getElementById('popupContact').classList.remove('hidden')" class="bg-indigo-700 text-white px-5 py-2 rounded-full hover:bg-indigo-800 transition">
+    ✨ Let's Talk
+  </button>
+</div>
+
+<!-- 👇 Place this further down — ideally just before </body> -->
+<!-- Contact Modal -->
+<div id="popupContact" class="hidden fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center backdrop-blur-sm">
+  <div class="bg-white rounded-3xl shadow-2xl max-w-sm w-full p-8 text-center relative animate-fade-in-up">
+    <button onclick="document.getElementById('popupContact').classList.add('hidden')" class="absolute top-3 right-4 text-gray-400 hover:text-gray-600 text-xl font-bold">
+      x
+    </button>
+    <h3 class="text-xl font-bold text-indigo-800 mb-2">📞 Contact Us</h3>
+    <p class="text-gray-600 text-sm mb-4">Choose how you’d like to reach us:</p>
+    <div class="space-y-2 text-indigo-700 font-medium text-sm">
+      <a href="tel:+919717949839" class="block hover:underline">📱 Call: +91 97179 49839</a>
+      <a href="https://wa.me/919717949839" target="_blank" class="block hover:underline">💬 WhatsApp</a>
+      <a href="mailto:youremail@example.com" class="block hover:underline">📧 Email Us</a>
+    </div>
+  </div>
+</div>
+
+
+
+
+<!-- 💬 WhatsApp Floating Button -->
+<a
+  href="https://wa.me/919717949839"
+  class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white px-4 py-3 rounded-full shadow-lg flex items-center gap-2 z-50 transition-all duration-300"
+  target="_blank"
+  aria-label="Chat on WhatsApp"
+>
+  <i class="fab fa-whatsapp text-2xl"></i>
+  <span class="font-semibold hidden md:inline">Chat on WhatsApp</span>
+</a>
+
+  
+  
+  </div>
+</section>
+
+<!-- 4️⃣ FAQ SECTION -->
+<section class="py-20 bg-white">
+  <div class="max-w-4xl mx-auto px-6" data-aos="fade-up">
+    <h2 class="text-3xl font-bold text-center mb-8 text-indigo-800">Frequently Asked Questions</h2>
+    <div class="space-y-4">
+      <div class="border rounded-lg overflow-hidden">
+        <button class="w-full text-left px-6 py-4 font-semibold bg-indigo-50 hover:bg-indigo-100 flex justify-between items-center" onclick="this.nextElementSibling.classList.toggle('hidden')">
+          What types of keynote topics does Suresh cover?
+          <span class="transform transition-transform">&plus;</span>
+        </button>
+        <div class="px-6 py-4 text-gray-700 hidden">
+          Leadership transformation, corporate culture, motivation in changing times, team engagement and more.
+        </div>
+      </div>
+      <div class="border rounded-lg overflow-hidden">
+        <button class="w-full text-left px-6 py-4 font-semibold bg-indigo-50 hover:bg-indigo-100 flex justify-between items-center" onclick="this.nextElementSibling.classList.toggle('hidden')">
+          Can he tailor speeches for corporate vs educational audiences?
+          <span class="transform transition-transform">&plus;</span>
+        </button>
+        <div class="px-6 py-4 text-gray-700 hidden">
+          Yes—sessions are customized based on audience type, occasion, tone, and organizational goals.
+        </div>
+      </div>
+      <div class="border rounded-lg overflow-hidden">
+        <button class="w-full text-left px-6 py-4 font-semibold bg-indigo-50 hover:bg-indigo-100 flex justify-between items-center" onclick="this.nextElementSibling.classList.toggle('hidden')">
+          Do you provide virtual or hybrid keynote options?
+          <span class="transform transition-transform">&plus;</span>
+        </button>
+        <div class="px-6 py-4 text-gray-700 hidden">
+          Absolutely—live-streamed, virtual, and hybrid formats are fully supported with engaging interactivity.
+        </div>
+      </div>
+      <div class="border rounded-lg overflow-hidden">
+        <button class="w-full text-left px-6 py-4 font-semibold bg-indigo-50 hover:bg-indigo-100 flex justify-between items-center" onclick="this.nextElementSibling.classList.toggle('hidden')">
+          How can I book Suresh for my event?
+          <span class="transform transition-transform">&plus;</span>
+        </button>
+        <div class="px-6 py-4 text-gray-700 hidden">
+          Use the “Let’s Connect” card above or reach us via WhatsApp/email. We'll guide you through availability, logistics, and pricing.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 📽️ MOTIVATIONAL VIDEOS (Swiper Version) -->
+<section class="bg-indigo-100 py-20 px-4 sm:px-6">
+  <div class="max-w-4xl mx-auto text-center mb-12">
+    <h2 class="text-4xl font-bold text-indigo-800 mb-4">📽️ Motivational Videos</h2>
+    <p class="text-gray-700">Glimpses from sessions, workshops, and keynote speeches that inspire transformation.</p>
+  </div>
+
+  <!-- 🎞️ Swiper Carousel for Videos -->
+  <div class="swiper mySwiper max-w-6xl mx-auto px-4">
+    <div class="swiper-wrapper">
+
+      <!-- Video 1 -->
+      <div class="swiper-slide min-w-[300px] bg-white p-4 rounded-2xl shadow-lg border border-indigo-200 hover:shadow-indigo-300 transition hover:scale-[1.02] duration-300 ease-in-out">
+        <iframe class="w-full aspect-video rounded-md mb-3" src="https://www.youtube.com/embed/FKL6hXXmckk" allowfullscreen></iframe>
+        <h4 class="text-base font-semibold text-indigo-800">Lead with Heart</h4>
+      </div>
+
+      <!-- Video 2 -->
+      <div class="swiper-slide min-w-[300px] bg-white p-4 rounded-2xl shadow-lg border border-indigo-200 hover:shadow-indigo-300 transition hover:scale-[1.02] duration-300 ease-in-out">
+        <iframe class="w-full aspect-video rounded-md mb-3" src="https://www.youtube.com/embed/qWA7eBqI7sI" allowfullscreen></iframe>
+        <h4 class="text-base font-semibold text-indigo-800">Ignite the Inner Spark</h4>
+      </div>
+
+      <!-- Video 3 -->
+      <div class="swiper-slide min-w-[300px] bg-white p-4 rounded-2xl shadow-lg border border-indigo-200 hover:shadow-indigo-300 transition hover:scale-[1.02] duration-300 ease-in-out">
+        <iframe class="w-full aspect-video rounded-md mb-3" src="https://www.youtube.com/embed/dRwfhIFRKy0" allowfullscreen></iframe>
+        <h4 class="text-base font-semibold text-indigo-800">Overcoming Self-Doubt</h4>
+      </div>
+
+      <!-- Video 4 -->
+      <div class="swiper-slide min-w-[300px] bg-white p-4 rounded-2xl shadow-lg border border-indigo-200 hover:shadow-indigo-300 transition hover:scale-[1.02] duration-300 ease-in-out">
+        <iframe class="w-full aspect-video rounded-md mb-3" src="https://www.youtube.com/embed/FeZ3iCPcU_A" allowfullscreen></iframe>
+        <h4 class="text-base font-semibold text-indigo-800">The Power of Vision</h4>
+      </div>
+
+    </div>
+
+    <!-- 🔘 Pagination Dots -->
+    <div class="swiper-pagination mt-6"></div>
+  </div>
+
+  <!-- 🔗 See More Button -->
+  <div class="mt-10 text-center">
+    <a href="https://youtube.com/c/SureshMohanSemwalMotivation?sub_confirmation=1" target="_blank"
+      class="inline-block bg-indigo-800 text-white px-6 py-3 rounded-full font-medium hover:bg-indigo-700 transition">
+      🎥 See More on YouTube
+    </a>
+  </div>
+
+  <!-- 🎨 Custom Swiper Styling -->
+  <style>
+    /* Hide default scrollbar */
+    .swiper::-webkit-scrollbar {
+      display: none;
+    }
+    .swiper {
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+    }
+
+    /* Blue pagination bullets */
+    .swiper-pagination-bullet {
+      background-color: #3b82f6; /* Tailwind's blue-500 */
+      opacity: 1;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    /* Yellow when active */
+    .swiper-pagination-bullet-active {
+      background-color: #facc15; /* Tailwind's yellow-400 */
+      transform: scale(1.3);
+    }
+  </style>
+
+  <!-- ⚙️ Swiper Initialization Script -->
+  <script>
+    new Swiper(".mySwiper", {
+      slidesPerView: 1.2,
+      spaceBetween: 20,
+      loop: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      breakpoints: {
+        640: { slidesPerView: 2 },
+        1024: { slidesPerView: 3 },
+      },
+    });
+  </script>
+</section>
+
+
+
+
+<!-- 🌟 Trusted Clients -->
+<section class="bg-gradient-to-r from-indigo-100 via-white to-indigo-50 py-20">
+  <div class="max-w-6xl mx-auto px-4 text-center" data-aos="fade-up">
+    <h2 class="text-3xl md:text-4xl font-bold text-indigo-900 mb-14 drop-shadow-md">🌟 Trusted by Leading Brands</h2>
+
+    <div class="swiper clientSwiper">
+      <div class="swiper-wrapper items-center">
+
+        <!-- 1. TCS -->
+        <div class="swiper-slide flex flex-col items-center space-y-3 hover:scale-105 transition-transform duration-300">
+          <div class="bg-white rounded-full shadow-lg ring-1 ring-indigo-200 p-4">
+            <img src="https://logo.clearbit.com/tcs.com" alt="TCS" class="h-12 w-auto object-contain" />
+          </div>
+          <p class="text-indigo-800 font-semibold text-sm">TCS</p>
+        </div>
+
+        <!-- 2. JCB -->
+        <div class="swiper-slide flex flex-col items-center space-y-3 hover:scale-105 transition-transform duration-300">
+          <div class="bg-white rounded-full shadow-lg ring-1 ring-indigo-200 p-4">
+            <img src="https://logo.clearbit.com/jcb.com" alt="JCB" class="h-12 w-auto object-contain" />
+          </div>
+          <p class="text-indigo-800 font-semibold text-sm">JCB</p>
+        </div>
+
+        <!-- 3. Wipro -->
+        <div class="swiper-slide flex flex-col items-center space-y-3 hover:scale-105 transition-transform duration-300">
+          <div class="bg-white rounded-full shadow-lg ring-1 ring-indigo-200 p-4">
+            <img src="https://logo.clearbit.com/wipro.com" alt="Wipro" class="h-12 w-auto object-contain" />
+          </div>
+          <p class="text-indigo-800 font-semibold text-sm">Wipro</p>
+        </div>
+
+       
+
+        <!-- 5. HPCL -->
+        <div class="swiper-slide flex flex-col items-center space-y-3 hover:scale-105 transition-transform duration-300">
+          <div class="bg-white rounded-full shadow-lg ring-1 ring-indigo-200 p-4">
+            <img src="https://logo.clearbit.com/hindustanpetroleum.com" alt="HPCL" class="h-12 w-auto object-contain" />
+          </div>
+          <p class="text-indigo-800 font-semibold text-sm">HPCL</p>
+        </div>
+
+        <!-- 6. Accenture -->
+        <div class="swiper-slide flex flex-col items-center space-y-3 hover:scale-105 transition-transform duration-300">
+          <div class="bg-white rounded-full shadow-lg ring-1 ring-indigo-200 p-4">
+            <img src="https://logo.clearbit.com/accenture.com" alt="Accenture" class="h-12 w-auto object-contain" />
+          </div>
+          <p class="text-indigo-800 font-semibold text-sm">Accenture</p>
+        </div>
+
+        <!-- 7. NTPC -->
+        <div class="swiper-slide flex flex-col items-center space-y-3 hover:scale-105 transition-transform duration-300">
+          <div class="bg-white rounded-full shadow-lg ring-1 ring-indigo-200 p-4">
+            <img src="https://logo.clearbit.com/ntpc.co.in" alt="NTPC" class="h-12 w-auto object-contain" />
+          </div>
+          <p class="text-indigo-800 font-semibold text-sm">NTPC</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Swiper CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+<!-- Swiper JS + Init -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<script>
+  var swiper = new Swiper(".clientSwiper", {
+    loop: true,
+    autoplay: { delay: 2500, disableOnInteraction: false },
+    slidesPerView: 2,
+    spaceBetween: 20,
+    breakpoints: {
+      640: { slidesPerView: 3 },
+      768: { slidesPerView: 4 },
+      1024: { slidesPerView: 5 },
+    },
+  });
+</script>
+<script>
+  const toggleBtn = document.getElementById('mobile-menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  toggleBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+</script>
+
+<section class="relative text-white mt-20 overflow-hidden">
+  <!-- 📽️ Background Video -->
+  <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover z-[-1] opacity-60">
+    <source src="video2.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- 🎨 Gradient Overlay for Better Text Contrast -->
+  <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/80 z-0"></div>
+
+  <!-- 📦 Footer Content -->
+  <footer class="relative z-10 bg-black/50 backdrop-blur-sm">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 pt-16 pb-10 px-6">
+
+      <!-- 🔗 Explore Links -->
+      <div>
+        <h3 class="text-2xl font-extrabold mb-6 text-yellow-300">Explore</h3>
+        <ul class="space-y-3 text-indigo-100 text-lg font-medium">
+          <li><a href="index.html" class="hover:text-yellow-400 transition">🏠 Home</a></li>
+          <li><a href="about.html" class="hover:text-yellow-400 transition">👤 About</a></li>
+          <li><a href="services.html" class="hover:text-yellow-400 transition">🛠️ Services</a></li>
+          <li><a href="resources.html" class="hover:text-yellow-400 transition">📚 Free Resources</a></li>
+          <li><a href="testimonials.html" class="hover:text-yellow-400 transition">💬 Testimonials</a></li>
+          <li><a href="media.html" class="hover:text-yellow-400 transition">📺 Media</a></li>
+          <li><a href="contact.html" class="hover:text-yellow-400 transition">📞 Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- 🙋 About -->
+      <div>
+        <h3 class="text-2xl font-extrabold mb-6 text-yellow-300">About</h3>
+        <p class="text-indigo-100 text-lg leading-relaxed">
+          Suresh Mohan Semwal is a leadership speaker, clarity mentor, and personal growth coach helping people thrive through transformation.
+        </p>
+      </div>
+
+      <!-- 🌐 Social Media Icons -->
+      <div>
+        <h3 class="text-2xl font-extrabold mb-6 text-yellow-300">Connect</h3>
+        <div class="flex gap-5 text-2xl">
+          <a href="https://youtube.com/c/SureshMohanSemwalMotivation" target="_blank" class="hover:text-red-500">
+            <i class="fab fa-youtube"></i>
+          </a>
+          <a href="https://possiblers.com" target="_blank" class="hover:text-indigo-300">
+            <i class="fas fa-globe"></i>
+          </a>
+          <a href="https://instagram.com/suresh.m.semwal" target="_blank" class="hover:text-pink-400">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://linkedin.com/in/sureshsemwal" target="_blank" class="hover:text-blue-400">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="https://sureshmohansemwal.blogspot.com" target="_blank" class="hover:text-gray-300">
+            <i class="fas fa-blog"></i>
+          </a>
+          <a href="https://facebook.com/sureshmohansemwal" target="_blank" class="hover:text-blue-500">
+            <i class="fab fa-facebook"></i>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- 📄 Footer Bottom -->
+    <div class="text-center mt-14 border-t border-indigo-800 pt-5 text-sm text-indigo-300">
+      &copy; 2025 <span class="text-yellow-400">Suresh Mohan Semwal</span>. All rights reserved.
+    </div>
+  </footer>
+</section>
+
+
+
+
+<script>
+  AOS.init({ once: true, duration: 600 });
+</script>
+</body>
+</html>

@@ -1,0 +1,385 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Keynote Speeches | Suresh Mohan Semwal</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <style>
+  
+ body {
+    font-family: 'Inter', sans-serif;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: 'Merriweather', serif;
+  }
+  /* 🔵 Pulsing White-Blue Glow for Hero Headings */
+  @keyframes text-glow {
+    0%, 100% {
+      text-shadow: 0 0 8px #ffffffcc, 0 0 18px #3b82f6aa;
+    }
+    50% {
+      text-shadow: 0 0 12px #ffffffee, 0 0 28px #60a5faee;
+    }
+  }
+
+  .animate-text-glow {
+    animation: text-glow 3s ease-in-out infinite;
+  }
+
+  /* 🔽 Smooth Upward Fade-in for Subheadings or Text Blocks */
+  @keyframes fadeInSlow {
+    0% {
+      opacity: 0;
+      transform: translateY(24px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fadeInSlow {
+    animation: fadeInSlow 2s ease-out forwards;
+  }
+</style>
+</head>
+
+<body class="bg-white text-gray-800">
+
+<!-- 🌟 Responsive Navbar with Working Dropdown -->
+<nav class="bg-white/70 backdrop-blur-lg shadow-md sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between h-16 items-center">
+      
+      <!-- Logo / Brand -->
+      <div class="flex-shrink-0 text-xl font-bold text-blue-700">SURESH MOHAN SEMWAL</div>
+
+      <!-- Desktop Menu -->
+      <div class="hidden md:flex space-x-8 items-center text-gray-800 font-medium">
+        <a href="index.html" class="hover:text-blue-600 transition">Home</a>
+        <a href="about.html" class="hover:text-blue-600 transition">About</a>
+
+        <!-- 🔽 Services Dropdown -->
+        <div class="relative group">
+          <button class="hover:text-blue-600 transition flex items-center gap-1">
+            Services
+            <svg class="w-4 h-4 transition-transform transform group-hover:rotate-180" fill="none" stroke="currentColor" stroke-width="2"
+              viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+
+          <div class="absolute left-0 mt-2 w-64 bg-white rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible hover:opacity-100 hover:visible transition-all duration-300 z-50">
+            <a href="services.html" class="block px-4 py-2 hover:bg-blue-100 font-semibold">All Services</a>
+            <hr class="border-gray-200 my-1">
+            <a href="services/project-folder/keynote.html" class="block px-4 py-2 hover:bg-blue-100">Keynote Speaking</a>
+            <a href="services/project-folder/leadership.html" class="block px-4 py-2 hover:bg-blue-100">Leadership Development</a>
+            <a href="services/project-folder/softskills.html" class="block px-4 py-2 hover:bg-blue-100">Soft Skills Workshops</a>
+            <a href="services/project-folder/motivational.html" class="block px-4 py-2 hover:bg-blue-100">Motivational Speaking</a>
+          </div>
+        </div>
+        <a href="resources.html" class="hover:text-blue-600 transition">Free Resources</a>
+        <a href="testimonials.html" class="hover:text-blue-600 transition">Testimonials</a>
+        <a href="blogs.html" class="hover:text-blue-600 transition">Blogs</a>
+        <a href="media.html" class="hover:text-blue-600 transition">Media</a>
+        <a href="contact.html" class="hover:text-blue-600 transition">Contact</a>
+      </div>
+
+      <!-- Hamburger Button for Mobile -->
+      <div class="md:hidden">
+        <button id="mobile-menu-toggle" class="focus:outline-none text-gray-800">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 📱 Mobile Menu -->
+  <div id="mobile-menu" class="md:hidden hidden px-4 pt-4 pb-6 space-y-3 bg-white shadow">
+    <a href="index.html" class="block hover:text-blue-600">Home</a>
+    <a href="about.html" class="block hover:text-blue-600">About</a>
+
+    <details class="group">
+      <summary class="cursor-pointer hover:text-blue-600 font-semibold">Services</summary>
+      <div class="pl-4 mt-2 space-y-2">
+        <a href="services.html" class="block hover:text-blue-600">All Services</a>
+        <a href="services/project-folder/keynote.html" class="block hover:text-blue-600">Keynote Speaking</a>
+        <a href="services/project-folder/leadership.html" class="block hover:text-blue-600">Leadership Development</a>
+        <a href="services/project-folder/softskills.html" class="block hover:text-blue-600">Soft Skills Workshops</a>
+        <a href="services/project-folder/motivational.html" class="block hover:text-blue-600">Motivational Speaking</a>
+      </div>
+    </details>
+    <a href="resources.html" class="block hover:text-blue-600">Free Resources</a>
+    <a href="testimonials.html" class="block hover:text-blue-600">Testimonials</a>
+    <a href="blogs.html" class="block hover:text-blue-600">Blogs</a>
+    <a href="media.html" class="block hover:text-blue-600">Media</a>
+  
+    <a href="contact.html" class="block hover:text-blue-600">Contact</a>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="relative text-white py-32 text-center overflow-hidden bg-blue-600 bg-opacity-20">
+
+  <!-- Background Image Strip -->
+  <div class="absolute inset-0 z-0 flex items-center justify-center py-8 ">
+    <div class="overflow-x-auto scroll-smooth px-6 [scrollbar-width:none] [-ms-overflow-style:none]">
+      <div class="flex items-center gap-3 min-w-max">
+        <img src="assets/k.1.jpg" alt="" class="object-cover rounded-md opacity-80 transition-transform duration-300 hover:scale-105" style="height: 300px; width: 500px;" />
+        <img src="assets/k.2.jpg" alt="" class="object-cover rounded-md opacity-80 transition-transform duration-300 hover:scale-105" style="height: 300px; width: 350px;" />
+        <img src="assets/k.3.jpg" alt="" class="object-cover rounded-md opacity-80 transition-transform duration-300 hover:scale-105" style="height: 300px; width: 350px;" />
+        <img src="assets/k.4.jpg" alt="" class="object-cover rounded-md opacity-80 transition-transform duration-300 hover:scale-105" style="height: 300px; width: 350px;" />
+        <img src="assets/k.5.jpg" alt="" class="object-cover rounded-md opacity-80 transition-transform duration-300 hover:scale-105" style="height: 300px; width: 350px;" />
+      </div>
+    </div>
+  </div>
+
+  <!-- Left Fade Overlay -->
+  <div class="absolute left-0 top-0 h-full w-12 z-10 bg-gradient-to-r from-blue-600/80 to-transparent pointer-events-none"></div>
+
+  <!-- Right Fade Overlay -->
+  <div class="absolute right-0 top-0 h-full w-12 z-10 bg-gradient-to-l from-blue-600/80 to-transparent pointer-events-none"></div>
+
+  <!-- Floating Text Only (No Box) -->
+  <div class="relative z-10 px-4">
+    <!-- Heading with Glow & Fade -->
+    <h1 class="text-5xl md:text-6xl font-extrabold bg-gradient-to-r from-white via-blue-300 to-white text-transparent bg-clip-text animate-text-glow animate-fadeInSlow tracking-tight drop-shadow-[0_3px_3px_rgba(0,0,0,0.9)]">
+      Keynote Speeches
+    </h1>
+
+    <!-- Subheading with Pop -->
+    <p class="mt-4 text-xl md:text-2xl font-medium text-white animate-fadeInSlow drop-shadow-[0_2px_4px_rgba(0,0,0,0.85)] px-4 inline-block bg-blue-900 bg-opacity-60 rounded-md backdrop-blur-sm">
+      Empowering Leadership. Igniting Change.
+    </p>
+  </div>
+
+  <!-- Left Arrow -->
+  <button onclick="scrollImages(-300)"
+    class="absolute left-3 top-1/2 transform -translate-y-1/2 z-20 bg-blue-700/50 hover:bg-blue-800 text-white rounded-full p-2.5 shadow-lg">
+    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+    </svg>
+  </button>
+
+  <!-- Right Arrow -->
+  <button onclick="scrollImages(300)"
+    class="absolute right-3 top-1/2 transform -translate-y-1/2 z-20 bg-blue-700/50 hover:bg-blue-800 text-white rounded-full p-2.5 shadow-lg">
+    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+    </svg>
+  </button>
+</section>
+
+
+<!-- JS Scroll Logic -->
+<script>
+  function scrollImages(amount) {
+  const container = document.querySelector('section .overflow-x-auto');
+  if (container) {
+    container.scrollBy({
+      left: amount,
+      behavior: 'smooth'
+    });
+  }
+}
+</script>
+
+<section class="relative overflow-hidden py-24 px-4 md:px-20">
+  <!-- Parallax Background -->
+  <div class="absolute inset-0 bg-fixed bg-[url('https://images.unsplash.com/photo-1581091870620-1e7e44b81b91?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80')] bg-cover bg-center opacity-30"></div>
+
+  <div class="relative z-10 max-w-6xl mx-auto">
+    <!-- Section Heading -->
+    <h2 data-aos="fade-up" class="text-4xl md:text-5xl font-bold text-center mb-16 text-gray-900 leading-tight">
+      <span class="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">🎤 Suresh in Action</span>
+    </h2>
+
+    <!-- Grid: Video + Image -->
+    <div class="grid md:grid-cols-2 gap-10 items-start">
+      <!-- Video Block -->
+      <div class="space-y-4" data-aos="fade-right">
+        <div class="rounded-2xl overflow-hidden shadow-2xl border-l-8 border-blue-500 transform hover:scale-105 transition duration-500 ease-in-out">
+          <iframe class="w-full aspect-video" src="https://www.youtube.com/embed/EteXGluBlSQ?autoplay=1&mute=1" title="Suresh Mohan Semwal Keynote Speech" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="bg-white/60 backdrop-blur-md p-5 rounded-xl shadow text-center">
+          <h3 class="text-2xl font-semibold text-gray-800 flex justify-center items-center gap-2">
+            <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.868v4.264a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" /></svg>
+            Keynote in Motion
+          </h3>
+          <p class="text-md text-gray-700 mt-2">Catch a glimpse of Suresh captivating audiences with energy, humor, and clarity.</p>
+        </div>
+      </div>
+
+      <!-- Image Block -->
+      <div class="space-y-4" data-aos="fade-left">
+        <div class="rounded-2xl overflow-hidden shadow-2xl transform hover:scale-105 transition duration-500 ease-in-out">
+          <img src="assets/k.1.jpg" alt="Keynote Speech" class="w-full object-cover h-full" />
+        </div>
+        <div class="bg-white/60 backdrop-blur-md p-5 rounded-xl shadow text-center">
+          <h3 class="text-2xl font-semibold text-gray-800 flex justify-center items-center gap-2">
+            <svg class="w-5 h-5 text-indigo-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3" /></svg>
+            Moments that Matter
+          </h3>
+          <p class="text-md text-gray-700 mt-2">Snapshots from powerful, transformative moments during live sessions and events.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Full-width Written Content -->
+    <div data-aos="fade-up" class="mt-20 max-w-3xl mx-auto text-center">
+      <h3 class="text-3xl font-semibold mb-4 text-gray-900">✨ Why Keynote Speeches Matter</h3>
+      <p class="text-lg text-gray-700 leading-relaxed mb-4">
+        Suresh Mohan Semwal’s keynote sessions are transformative — tailored for leaders, entrepreneurs, and organizations ready to elevate their vision. His talks combine storytelling, practical wisdom, and humor to inspire real action.
+      </p>
+      <p class="text-md text-gray-600">
+        Whether you’re hosting a corporate event or a leadership summit, these speeches are designed to energize and align your audience.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+<!-- AOS Scripts -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000,
+    once: true,
+    easing: 'ease-out-quart',
+  });
+</script>
+
+
+
+
+<!-- CTA Section -->
+<section class="relative bg-blue-600 text-white py-20 text-center overflow-hidden">
+  <!-- Blurred Background Effect -->
+  <div class="absolute -top-10 -left-10 w-96 h-96 bg-white opacity-10 rounded-full blur-3xl z-0"></div>
+  <div class="relative z-10">
+    <h2 data-aos="zoom-in" class="text-4xl font-bold mb-4 tracking-tight">
+      🚀 Ready to Elevate Your Event?
+    </h2>
+    <p class="mb-8 text-lg">Book Suresh Mohan Semwal and create a spark your audience won’t forget.</p>
+    <a href="../../../contact.html" class="inline-flex items-center gap-2 bg-white text-blue-600 px-6 py-3 font-bold rounded-full shadow-xl hover:scale-105 hover:bg-gray-100 transition duration-300">
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+      </svg>
+      Enquire Now
+    </a>
+  </div>
+</section>
+
+
+
+ 
+
+  
+
+
+
+
+  <!-- Tailwind Animations & AOS -->
+  <script>
+    document.querySelectorAll('.animate-fadeIn').forEach((el, i) => {
+      el.style.opacity = 0;
+      el.style.transform = 'translateY(20px)';
+      setTimeout(() => {
+        el.style.transition = 'all 0.6s ease-out';
+        el.style.opacity = 1;
+        el.style.transform = 'translateY(0)';
+      }, i * 100);
+    });
+  </script>
+
+ <script>
+  const toggleBtn = document.getElementById('mobile-menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  toggleBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+</script>
+
+ 
+<section class="relative text-white mt-20 overflow-clip z-0">
+
+  <!-- 📽️ Background Video -->
+  <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover z-[-1] opacity-60">
+    <source src="video2.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- 🎨 Gradient Overlay for Better Text Contrast -->
+  <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/80 z-0"></div>
+
+  <!-- 📦 Footer Content -->
+  <footer class="relative z-10 bg-black/50 backdrop-blur-sm">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 pt-16 pb-10 px-6">
+
+      <!-- 🔗 Explore Links -->
+      <div>
+        <h3 class="text-2xl font-extrabold mb-6 text-yellow-300">Explore</h3>
+        <ul class="space-y-3 text-indigo-100 text-lg font-medium">
+          <li><a href="index.html" class="hover:text-yellow-400 transition">🏠 Home</a></li>
+          <li><a href="about.html" class="hover:text-yellow-400 transition">👤 About</a></li>
+          <li><a href="services.html" class="hover:text-yellow-400 transition">🛠️ Services</a></li>
+          <li><a href="resources.html" class="hover:text-yellow-400 transition">📚 Free Resources</a></li>
+          <li><a href="testimonials.html" class="hover:text-yellow-400 transition">💬 Testimonials</a></li>
+          <li><a href="media.html" class="hover:text-yellow-400 transition">📺 Media</a></li>
+          <li><a href="contact.html" class="hover:text-yellow-400 transition">📞 Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- 🙋 About -->
+      <div>
+        <h3 class="text-2xl font-extrabold mb-6 text-yellow-300">About</h3>
+        <p class="text-indigo-100 text-lg leading-relaxed">
+          Suresh Mohan Semwal is a leadership speaker, clarity mentor, and personal growth coach helping people thrive through transformation.
+        </p>
+      </div>
+
+      <!-- 🌐 Social Media Icons -->
+      <div>
+        <h3 class="text-2xl font-extrabold mb-6 text-yellow-300">Connect</h3>
+        <div class="flex gap-5 text-2xl">
+          <a href="https://youtube.com/c/SureshMohanSemwalMotivation" target="_blank" class="hover:text-red-500">
+            <i class="fab fa-youtube"></i>
+          </a>
+          <a href="https://possiblers.com" target="_blank" class="hover:text-indigo-300">
+            <i class="fas fa-globe"></i>
+          </a>
+          <a href="https://instagram.com/suresh.m.semwal" target="_blank" class="hover:text-pink-400">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://linkedin.com/in/sureshsemwal" target="_blank" class="hover:text-blue-400">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="https://sureshmohansemwal.blogspot.com" target="_blank" class="hover:text-gray-300">
+            <i class="fas fa-blog"></i>
+          </a>
+          <a href="https://facebook.com/sureshmohansemwal" target="_blank" class="hover:text-blue-500">
+            <i class="fab fa-facebook"></i>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- 📄 Footer Bottom -->
+    <div class="text-center mt-14 border-t border-indigo-800 pt-5 text-sm text-indigo-300">
+      &copy; 2025 <span class="text-yellow-400">Suresh Mohan Semwal</span>. All rights reserved.
+    </div>
+  </footer>
+</section>
+</body>
+</html>

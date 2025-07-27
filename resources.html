@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Free Resources | Suresh Semwal</title>
+
+  <!-- 🌈 Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+/>
+
+
+  <!-- 🌟 Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
+
+  <!-- 📄 Font Awesome for Icons -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+ <!-- ✅ Font Awesome v6 (latest recommended CDN) -->
+  <script src="https://kit.fontawesome.com/4b9b4b0f3f.js" crossorigin="anonymous"></script>
+
+  <!-- ✅ Swiper v7 -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+  <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+  <!-- ✨ Modal + Animation Styles -->
+  <style>
+    .swiper-slide img {
+      animation: talkingFace 6s ease-in-out infinite;
+      transform-origin: center;
+      width: 100%;
+      height: 500px;
+      object-fit: contain;
+      border-radius: 0.75rem;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+      cursor: pointer;
+      filter: brightness(1.05) contrast(1.05) saturate(1.1);
+    }
+
+    @keyframes talkingFace {
+      0% {
+        transform: scale(1) translateY(0px);
+        filter: hue-rotate(0deg);
+      }
+      25% {
+        transform: scale(1.01) translateY(0.5px);
+        filter: hue-rotate(2deg);
+      }
+      50% {
+        transform: scale(1.02) translateY(1px);
+        filter: hue-rotate(-1deg);
+      }
+      75% {
+        transform: scale(1.01) translateY(0.5px);
+        filter: hue-rotate(2deg);
+      }
+      100% {
+        transform: scale(1) translateY(0px);
+        filter: hue-rotate(0deg);
+      }
+    }
+
+    .modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.9);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+      display: none;
+    }
+
+    .modal img {
+      max-height: 90vh;
+      max-width: 90vw;
+      border-radius: 1rem;
+    }
+  </style>
+  <style>
+  .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    background-color: white;
+    opacity: 0.6;
+    margin: 0 6px !important;
+    transition: transform 0.3s ease;
+  }
+
+  .swiper-pagination-bullet-active {
+    background-color: #facc15; /* Yellow-400 */
+    opacity: 1;
+    transform: scale(1.3);
+  }
+
+  .swiper-pagination {
+    text-align: center;
+    margin-top: 20px;
+  }
+</style>
+
+<style>
+  html, body {
+    overflow-x: hidden;
+  }
+
+  .swiper-container,
+  .swiper-wrapper,
+  .swiper-slide {
+    max-width: 100vw;
+    box-sizing: border-box;
+  }
+</style>
+
+<style>
+  .swiper-pagination-bullet {
+    background-color: #3b82f6 !important; /* blue-500 */
+    opacity: 1 !important;
+  }
+
+  .swiper-pagination-bullet-active {
+    background-color: #facc15 !important; /* yellow-400 */
+    transform: scale(1.2);
+  }
+</style>
+<style>
+.swiper-pagination-bullet {
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+</style>
+
+
+</head>
+
+<body class="bg-gray-900 text-white overflow-x-hidden">
+   
+  <!-- 🌟 Responsive Navbar with Working Dropdown -->
+<nav class="bg-white/70 backdrop-blur-lg shadow-md sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between h-16 items-center">
+      
+      <!-- Logo / Brand -->
+      <div class="flex-shrink-0 text-xl font-bold text-blue-700">SURESH MOHAN SEMWAL</div>
+
+      <!-- Desktop Menu -->
+      <div class="hidden md:flex space-x-8 items-center text-gray-800 font-medium">
+        <a href="index.html" class="hover:text-blue-600 transition">Home</a>
+        <a href="about.html" class="hover:text-blue-600 transition">About</a>
+
+        <!-- 🔽 Services Dropdown -->
+        <div class="relative group">
+          <button class="hover:text-blue-600 transition flex items-center gap-1">
+            Services
+            <svg class="w-4 h-4 transition-transform transform group-hover:rotate-180" fill="none" stroke="currentColor" stroke-width="2"
+              viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+
+          <div class="absolute left-0 mt-2 w-64 bg-white rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible hover:opacity-100 hover:visible transition-all duration-300 z-50">
+            <a href="services.html" class="block px-4 py-2 hover:bg-blue-100 font-semibold">All Services</a>
+            <hr class="border-gray-200 my-1">
+            <a href="services/project-folder/keynote.html" class="block px-4 py-2 hover:bg-blue-100">Keynote Speaking</a>
+            <a href="services/project-folder/leadership.html" class="block px-4 py-2 hover:bg-blue-100">Leadership Development</a>
+            <a href="services/project-folder/softskills.html" class="block px-4 py-2 hover:bg-blue-100">Soft Skills Workshops</a>
+            <a href="services/project-folder/motivational.html" class="block px-4 py-2 hover:bg-blue-100">Motivational Speaking</a>
+          </div>
+        </div>
+         <a href="resources.html" class="hover:text-blue-600 transition">Free Resources</a>
+        <a href="testimonials.html" class="hover:text-blue-600 transition">Testimonials</a>
+        <a href="blogs.html" class="hover:text-blue-600 transition">Blogs</a>
+        <a href="media.html" class="hover:text-blue-600 transition">Media</a>
+        <a href="contact.html" class="hover:text-blue-600 transition">Contact</a>
+      </div>
+
+      <!-- Hamburger Button for Mobile -->
+      <div class="md:hidden">
+        <button id="mobile-menu-toggle" class="focus:outline-none text-gray-800">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 📱 Mobile Menu -->
+  <div id="mobile-menu" class="md:hidden hidden px-4 pt-4 pb-6 space-y-3 bg-white shadow">
+    <a href="index.html" class="block hover:text-blue-600">Home</a>
+    <a href="about.html" class="block hover:text-blue-600">About</a>
+
+    <details class="group">
+      <summary class="cursor-pointer hover:text-blue-600 font-semibold">Services</summary>
+      <div class="pl-4 mt-2 space-y-2">
+        <a href="services.html" class="block hover:text-blue-600">All Services</a>
+        <a href="services/project-folder/keynote.html" class="block hover:text-blue-600">Keynote Speaking</a>
+        <a href="services/project-folder/leadership.html" class="block hover:text-blue-600">Leadership Development</a>
+        <a href="services/project-folder/softskills.html" class="block hover:text-blue-600">Soft Skills Workshops</a>
+        <a href="services/project-folder/motivational.html" class="block hover:text-blue-600">Motivational Speaking</a>
+      </div>
+    </details>
+
+    <a href="testimonials.html" class="block hover:text-blue-600">Testimonials</a>
+    <a href="blogs.html" class="block hover:text-blue-600">Blogs</a>
+    <a href="media.html" class="block hover:text-blue-600">Media</a>
+   <a href="resources.html" class="block hover:text-blue-600">Free Resources</a>
+    <a href="contact.html" class="block hover:text-blue-600">Contact</a>
+  </div>
+</nav>
+
+  <!-- 🌟 Hero Section -->
+  <section class="text-center py-16 px-4 bg-gradient-to-b from-indigo-900 to-indigo-950">
+    <h1 class="text-5xl font-extrabold text-yellow-400 mb-4">Resources That Resonate</h1>
+    <p class="text-indigo-200 text-lg max-w-2xl mx-auto">
+      A powerful curation of quotes, captured moments, and transformative resources by Suresh Mohan Semwal.
+    </p>
+  </section>
+
+  <!-- 📸 Quote Swiper Section -->
+  <section class="py-16 px-4">
+    <div class="text-center mb-10">
+      <h2 class="text-4xl font-bold mb-2">📸 Moments Captured from Our Suresh Sir</h2>
+      <p class="text-indigo-200 text-lg italic">Quotes by Suresh Mohan Semwal that inspire clarity and action</p>
+    </div>
+
+    <!-- 🌀 Swiper -->
+    <div class="swiper-container mySwiper w-full px-4 sm:px-10">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="q1.jpg" alt="Quote 1">
+        </div>
+        <div class="swiper-slide">
+          <img src="q2.jpg" alt="Quote 2">
+        </div>
+        <div class="swiper-slide">
+          <img src="q3.jpg" alt="Quote 3">
+        </div>
+        <div class="swiper-slide">
+          <img src="q4.jpg" alt="Quote 4">
+        </div>
+        <div class="swiper-slide">
+          <img src="q5.jpg" alt="Quote 5">
+        </div>
+        <div class="swiper-slide">
+          <img src="q6.jpg" alt="Quote 6">
+        </div>
+      </div>
+      <!-- 👇 Pagination dots -->
+      <div class="swiper-pagination mt-4"></div>
+    </div>
+  </section>
+
+  <!-- 🔍 Modal for Enlarged Image -->
+  <div id="modal" class="modal" onclick="closeModal()">
+    <img id="modalImage" src="" alt="Expanded Quote">
+  </div>
+
+  <!-- 🧠 Scripts -->
+  <script>
+    const swiper = new Swiper('.swiper-container', {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      loop: true,
+      autoplay: {
+        delay: 4000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      breakpoints: {
+        640: { slidesPerView: 1 },
+        768: { slidesPerView: 2 },
+        1024: { slidesPerView: 3 },
+      },
+    });
+
+    const modal = document.getElementById("modal");
+    const modalImage = document.getElementById("modalImage");
+
+    document.querySelectorAll(".swiper-slide img").forEach(img => {
+      img.addEventListener("click", () => {
+        modalImage.src = img.src;
+        modal.style.display = "flex";
+      });
+    });
+
+    function closeModal() {
+      modal.style.display = "none";
+      modalImage.src = "";
+    }
+  </script>
+
+  <!-- 📚 Beautiful Resource Cards Section -->
+  <section class="py-20 px-6">
+    <h2 class="text-4xl font-extrabold text-yellow-400 mb-12 text-center">📘 Books, Resources & Free Downloads</h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-5xl mx-auto">
+      
+      <!-- Card 1 -->
+      <div class="bg-indigo-800 p-6 rounded-2xl shadow-xl hover:shadow-yellow-400/30 transition hover:scale-105">
+        <div class="text-5xl text-yellow-400 mb-4">
+          <i class="fas fa-spa"></i>
+        </div>
+        <h3 class="text-2xl font-bold mb-2">Peace of Mind</h3>
+        <p class="text-indigo-200 mb-4">A guide to reclaim inner stillness and balance.</p>
+        <a href="r1.pdf" download class="bg-yellow-400 text-indigo-900 font-semibold px-4 py-2 rounded-full hover:bg-yellow-300 transition">Download</a>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="bg-indigo-800 p-6 rounded-2xl shadow-xl hover:shadow-yellow-400/30 transition hover:scale-105">
+        <div class="text-5xl text-yellow-400 mb-4">
+          <i class="fas fa-brain"></i>
+        </div>
+        <h3 class="text-2xl font-bold mb-2">You're Not Tired, Just Tangled</h3>
+        <p class="text-indigo-200 mb-4">Understand burnout and emotional knots.</p>
+        <a href="r2.pdf" download class="bg-yellow-400 text-indigo-900 font-semibold px-4 py-2 rounded-full hover:bg-yellow-300 transition">Download</a>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="bg-indigo-800 p-6 rounded-2xl shadow-xl hover:shadow-yellow-400/30 transition hover:scale-105">
+        <div class="text-5xl text-yellow-400 mb-4">
+          <i class="fas fa-trophy"></i>
+        </div>
+        <h3 class="text-2xl font-bold mb-2">Success vs Fulfillment</h3>
+        <p class="text-indigo-200 mb-4">Discover deeper definitions of achievement.</p>
+        <a href="r3.pdf" download class="bg-yellow-400 text-indigo-900 font-semibold px-4 py-2 rounded-full hover:bg-yellow-300 transition">Download</a>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="bg-indigo-800 p-6 rounded-2xl shadow-xl hover:shadow-yellow-400/30 transition hover:scale-105">
+        <div class="text-5xl text-yellow-400 mb-4">
+          <i class="fas fa-user-shield"></i>
+        </div>
+        <h3 class="text-2xl font-bold mb-2">Traits of Arrogance</h3>
+        <p class="text-indigo-200 mb-4">A breakdown of personal reflection tools.</p>
+        <a href="r4.pdf" download class="bg-yellow-400 text-indigo-900 font-semibold px-4 py-2 rounded-full hover:bg-yellow-300 transition">Download</a>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="bg-indigo-800 p-6 rounded-2xl shadow-xl hover:shadow-yellow-400/30 transition hover:scale-105">
+        <div class="text-5xl text-yellow-400 mb-4">
+          <i class="fas fa-heartbeat"></i>
+        </div>
+        <h3 class="text-2xl font-bold mb-2">Emotional Intelligence Toolkit</h3>
+        <p class="text-indigo-200 mb-4">Using Transactional Analysis to grow.</p>
+        <a href="r5.pdf" download class="bg-yellow-400 text-indigo-900 font-semibold px-4 py-2 rounded-full hover:bg-yellow-300 transition">Download</a>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="bg-indigo-800 p-6 rounded-2xl shadow-xl hover:shadow-yellow-400/30 transition hover:scale-105">
+        <div class="text-5xl text-yellow-400 mb-4">
+          <i class="fas fa-film"></i>
+        </div>
+        <h3 class="text-2xl font-bold mb-2">Movies That Moved Me</h3>
+        <p class="text-indigo-200 mb-4">Stories that shaped emotional depth.</p>
+        <a href="r6.pdf" download class="bg-yellow-400 text-indigo-900 font-semibold px-4 py-2 rounded-full hover:bg-yellow-300 transition">Download</a>
+      </div>
+
+      <!-- Card 7 -->
+      <div class="bg-indigo-800 p-6 rounded-2xl shadow-xl hover:shadow-yellow-400/30 transition hover:scale-105">
+        <div class="text-5xl text-yellow-400 mb-4">
+          <i class="fas fa-comments"></i>
+        </div>
+        <h3 class="text-2xl font-bold mb-2">8 Ways to Handle Negativity</h3>
+        <p class="text-indigo-200 mb-4">Master your mindset with practical wisdom.</p>
+        <a href="r7.pdf" download class="bg-yellow-400 text-indigo-900 font-semibold px-4 py-2 rounded-full hover:bg-yellow-300 transition">Download</a>
+      </div>
+
+      <!-- Card 8 (Optional Placeholder) -->
+      <div class="bg-indigo-800 p-6 rounded-2xl shadow-xl hover:shadow-yellow-400/30 transition hover:scale-105">
+        <div class="text-5xl text-yellow-400 mb-4">
+          <i class="fas fa-seedling"></i>
+        </div>
+        <h3 class="text-2xl font-bold mb-2">Coming Soon</h3>
+        <p class="text-indigo-200 mb-4">More thoughtful downloads on the way.</p>
+        <button class="bg-gray-400 text-indigo-900 font-semibold px-4 py-2 rounded-full cursor-not-allowed">Not Ready</button>
+      </div>
+
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+   <!-- 📸 Additional Captured Moments -->
+  <section class="py-16 px-6 bg-indigo-950">
+    <h2 class="text-3xl font-bold mb-10 text-center">🌟 Glimpses of Connection</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+      <img src="blog-posts/8.jpeg" alt="Moment" class="rounded-2xl shadow-xl w-full object-cover">
+      <img src="blog-posts/4.jpeg" alt="Moment" class="rounded-2xl shadow-xl w-full object-cover">
+      <img src="blog-posts/11.jpeg" alt="Moment" class="rounded-2xl shadow-xl w-full object-cover">
+      <img src="i7.JPG" alt="Moment" class="rounded-2xl shadow-xl w-full object-cover">
+      <img src="i9.JPG" alt="Moment" class="rounded-2xl shadow-xl w-full object-cover">
+      <img src="t13.jpeg" alt="Moment" class="rounded-2xl shadow-xl w-full object-cover">
+    </div>
+  </section>
+
+  
+<script>
+  const toggleBtn = document.getElementById('mobile-menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  toggleBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+</script>
+<section class="relative text-white mt-20 overflow-hidden">
+  <!-- 📽️ Background Video -->
+  <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover z-[-1] opacity-60">
+    <source src="video2.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- 🎨 Gradient Overlay for Better Text Contrast -->
+  <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/80 z-0"></div>
+
+  <!-- 📦 Footer Content -->
+  <footer class="relative z-10 bg-black/50 backdrop-blur-sm">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 pt-16 pb-10 px-6">
+
+      <!-- 🔗 Explore Links -->
+      <div>
+        <h3 class="text-2xl font-extrabold mb-6 text-yellow-300">Explore</h3>
+        <ul class="space-y-3 text-indigo-100 text-lg font-medium">
+          <li><a href="index.html" class="hover:text-yellow-400 transition">🏠 Home</a></li>
+          <li><a href="about.html" class="hover:text-yellow-400 transition">👤 About</a></li>
+          <li><a href="services.html" class="hover:text-yellow-400 transition">🛠️ Services</a></li>
+          <li><a href="resources.html" class="hover:text-yellow-400 transition">📚 Free Resources</a></li>
+          <li><a href="testimonials.html" class="hover:text-yellow-400 transition">💬 Testimonials</a></li>
+          <li><a href="media.html" class="hover:text-yellow-400 transition">📺 Media</a></li>
+          <li><a href="contact.html" class="hover:text-yellow-400 transition">📞 Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- 🙋 About -->
+      <div>
+        <h3 class="text-2xl font-extrabold mb-6 text-yellow-300">About</h3>
+        <p class="text-indigo-100 text-lg leading-relaxed">
+          Suresh Mohan Semwal is a leadership speaker, clarity mentor, and personal growth coach helping people thrive through transformation.
+        </p>
+      </div>
+
+      <!-- 🌐 Social Media Icons -->
+      <div>
+        <h3 class="text-2xl font-extrabold mb-6 text-yellow-300">Connect</h3>
+        <div class="flex gap-5 text-2xl">
+          <a href="https://youtube.com/c/SureshMohanSemwalMotivation" target="_blank" class="hover:text-red-500">
+            <i class="fab fa-youtube"></i>
+          </a>
+          <a href="https://possiblers.com" target="_blank" class="hover:text-indigo-300">
+            <i class="fas fa-globe"></i>
+          </a>
+          <a href="https://instagram.com/suresh.m.semwal" target="_blank" class="hover:text-pink-400">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://linkedin.com/in/sureshsemwal" target="_blank" class="hover:text-blue-400">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="https://sureshmohansemwal.blogspot.com" target="_blank" class="hover:text-gray-300">
+            <i class="fas fa-blog"></i>
+          </a>
+          <a href="https://facebook.com/sureshmohansemwal" target="_blank" class="hover:text-blue-500">
+            <i class="fab fa-facebook"></i>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- 📄 Footer Bottom -->
+    <div class="text-center mt-14 border-t border-indigo-800 pt-5 text-sm text-indigo-300">
+      &copy; 2025 <span class="text-yellow-400">Suresh Mohan Semwal</span>. All rights reserved.
+    </div>
+  </footer>
+</section>
+
+   
+</body>
+</html>
